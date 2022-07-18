@@ -7,11 +7,14 @@ import MovieDetail from "./pages/MovieDetail";
 import Navigation from "./components/Navigation/Navigation";
 import { themeContext } from "./components/themes/ContextTheme";
 import ThemeSelector from "./components/themes/ThemeSelector";
+import useTheme from "./hook/useTheme";
 
 function App() {
+  const { mode } = useTheme();
+
   return (
     <div>
-      <div className="App">
+      <div className={`App ${mode} h-screen `}>
         <Navigation></Navigation>
         <ThemeSelector></ThemeSelector>
 

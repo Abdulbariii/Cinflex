@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className="h-[44rem] bg-indigo-100 flex flex-col items-start justify-center">
+    <div className=" flex flex-col items-start justify-center">
       <Title></Title>
     </div>
   );
