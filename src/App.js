@@ -1,9 +1,22 @@
 import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
+import About from "./pages/About";
+import Home from "./pages/Home";
+import Movies from "./pages/Movies";
+import MovieDetail from "./pages/MovieDetail";
+import Navigation from "./components/Navigation/Navigation";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="text-3xl text-red-400">Hello</h1>
+      <Navigation></Navigation>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/movieDetail/:id" element={<About />} />
+      </Routes>
     </div>
   );
 }
