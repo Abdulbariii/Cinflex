@@ -1,5 +1,5 @@
 import React from "react";
-import me from "../components/img/myselff.jpg";
+
 import useTheme from "../hook/useTheme";
 export default function ShowBox(props) {
   const { color } = useTheme();

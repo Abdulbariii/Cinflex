@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div>
-      <div className={`App ${mode} h-fit lg:h-screen md:h-screen `}>
+      <div className={`App ${mode}  min-h-screen p-2 `}>
         <Navigation></Navigation>
         <ThemeSelector></ThemeSelector>
 
@@ -22,7 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/movies" element={<Movies />} />
-          <Route path="/movieDetail/:id" element={<About />} />
+          <Route path="/movieDetail/:id" element={<MovieDetail />} />
         </Routes>
       </div>
     </div>

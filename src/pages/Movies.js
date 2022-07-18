@@ -1,10 +1,12 @@
 import React from "react";
 import Search from "../components/SearchBar.js/Search";
+import Cards from "../components/cards/Cards";
 
 export default function Movies() {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex flex-col gap-5 justify-center items-center">
       <Search></Search>
+      <Cards></Cards>
     </div>
   );
 }
