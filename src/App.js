@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div>
-      <div className={`App ${mode} h-screen `}>
+      <div className={`App ${mode} h-fit lg:h-screen md:h-screen `}>
         <Navigation></Navigation>
         <ThemeSelector></ThemeSelector>
 

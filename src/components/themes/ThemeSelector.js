@@ -9,7 +9,7 @@ export default function ThemeSelector() {
     colorMode(mode === "bg-gray-50" ? "bg-gray-900" : "bg-gray-50");
   };
   return (
-    <div className="flex  items-center justify-between">
+    <div className="flex  items-center justify-between pt-5">
       <div className="ml-20">
         <img
           onClick={() => {
@@ -21,7 +21,7 @@ export default function ThemeSelector() {
           src={logo}
         />
       </div>
-      <div className="flex mr-20">
+      <div className="flex mr-10">
         {colors.map((color) => (
           <div
             key={color}
