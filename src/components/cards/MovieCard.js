@@ -13,6 +13,7 @@ export default function MovieCard(props) {
             <img
               src={movie.image}
               className="absolute w-full rounded-sm h-full object-cover"
+              alt="img"
             />
             <div
               className={`absolute bottom-0 card  ${color} bg-opacity-80 flex transition-all justify-around items-start flex-col h-0    overflow-hidden w-full`}

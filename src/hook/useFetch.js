@@ -5,11 +5,11 @@ export const useFetch = (url) => {
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState(null);
   const options = {
-    method: "GET",
+    method: 'GET',
     headers: {
-      "X-RapidAPI-Key": "f6bafe28f6mshf70719373781ec6p1fec85jsn2d462831e2a7",
-      "X-RapidAPI-Host": "movies-app1.p.rapidapi.com",
-    },
+      'X-RapidAPI-Key': 'be66b1df87mshe46c33b7d7b5e2ap18ae02jsn7132fb194ac1',
+      'X-RapidAPI-Host': 'movies-app1.p.rapidapi.com'
+    }
   };
 
   useEffect(() => {
