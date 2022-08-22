@@ -25,6 +25,12 @@ export default function Navbar() {
         >
           About
         </Link>
+        <Link
+          className="m-3  hover:scale-105 transition-all duration-100  text-2xl font-light "
+          to="/SignUp"
+        >
+          Sign Up
+        </Link>
       </nav>
     </div>
   );
