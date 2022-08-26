@@ -1,6 +1,5 @@
 import React from "react";
 import Title from "../components/Title";
-import ShowBox from "../components/ShowBox";
 import { useFetch } from "../hook/useFetch";
 import Slider from "../Slider";
 

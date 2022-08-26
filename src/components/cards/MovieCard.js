@@ -9,7 +9,7 @@ export default function MovieCard(props) {
     <div className="flex flex-wrap gap-1 ml-20 mr-20">
       {props.movies &&
         props.movies.results.map((movie) => (
-          <div className="w-40 rounded-sm card-con  h-60 relative">
+          <div key={movie._id} className="w-40 rounded-sm card-con  h-60 relative">
             <img
               src={movie.image}
               className="absolute w-full rounded-sm h-full object-cover"
