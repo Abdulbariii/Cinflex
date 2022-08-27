@@ -3,16 +3,27 @@ import { Link, useParams } from "react-router-dom";
 import { useFetch } from "../hook/useFetch";
 import { Outlet } from "react-router-dom";
 import useTheme from "../hook/useTheme";
+import { useNavigate } from "react-router-dom";
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 
 export default function MovieDetail() {
   const {id}=useParams();
   const url=`https://movies-app1.p.rapidapi.com/api/movie/${id}`;
-  const { data, isPending, error }= useFetch(url);
+  const { data }= useFetch(url);
   const {  color } = useTheme();
 
-
+const Navigate=useNavigate();
 
   return (<div className=" overflow-hidden">
+
+{/* Back  */}
+<p className="text-white ml-[4rem] mt-[2rem]" onClick={()=>{Navigate('/movies')}}><KeyboardBackspaceIcon
+sx={{ fontSize: 40 }}
+className={'bg-[#0EA5E9]'}
+
+
+/></p>
+
 {
   data&&
                <div className=" lg:mt-[4rem] md:mt[3rem] sm:mt[3rem] flex lg:ml-[20%]   gap-[3rem] 

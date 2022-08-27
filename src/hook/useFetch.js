@@ -7,10 +7,11 @@ export const useFetch = (url) => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': 'be66b1df87mshe46c33b7d7b5e2ap18ae02jsn7132fb194ac1',
+      'X-RapidAPI-Key': 'bebf8be787mshb2b4237a28f4e93p1ea88fjsn121587fcbbd8',
       'X-RapidAPI-Host': 'movies-app1.p.rapidapi.com'
     }
   };
+  
 
   useEffect(() => {
     const fetchData = async () => {

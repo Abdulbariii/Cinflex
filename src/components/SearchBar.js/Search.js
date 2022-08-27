@@ -2,33 +2,26 @@ import React,{useState,useEffect} from "react";
 import { useFetch } from "../../hook/useFetch";
 import useTheme from "../../hook/useTheme";
 
-export default function Search({setMovieGeneree,movieGeneree,setMovieTitle,movieTitle}) {
-
-
-const XX=(e)=>{
-  setMovieGeneree(e.target.value);
-}
-
-const Title=(e)=>{
-  console.log(e.target.value);
- setMovieTitle(e.target.value);
-}
+export default function Search() {
 
 
 
 
 
-// fun(movieGenere)
-  const {mode} = useTheme();
+  const {mode,getYear,getGeners,getTitle} = useTheme();
   const url = `https://movies-app1.p.rapidapi.com/api/genres`;
-  const { data, isPending, error } = useFetch(url);
+  const { data} = useFetch(url);
   const [years, setYears] = useState();
+
+
+
+
 
   // create link
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': 'be66b1df87mshe46c33b7d7b5e2ap18ae02jsn7132fb194ac1',
+      'X-RapidAPI-Key': 'bebf8be787mshb2b4237a28f4e93p1ea88fjsn121587fcbbd8',
       'X-RapidAPI-Host': 'movies-app1.p.rapidapi.com'
     }
   };
@@ -55,13 +48,12 @@ const Title=(e)=>{
             {/* input */}
 
             <input
-            value={movieTitle}
-            onChange={Title}
+           onChange={e=>getTitle(e.target.value)}
               placeholder="Search"
-              className={`w-72 h-8 shadow shadow-lg  shadow-[#0000003a]  text-black p-1 rounded-sm ${
+              className={`w-72 h-8  shadow-lg  shadow-[#0000003a]  text-black p-1 rounded-sm ${
                 mode === "bg-gray-50" ? "bg-gray-50" : "bg-gray-900"
               }`}
-            ></input>
+            />
           </label>
         </div>
         <div>
@@ -76,9 +68,9 @@ const Title=(e)=>{
             <select
 
 
-value={movieGeneree} onChange={XX}
+ onChange={(e)=>{getGeners(e.target.value.toLowerCase())}}
 
-              className={`h-8 p-1 flex justify-center items-center rounded-sm shadow shadow-lg  shadow-[#0000003a]  text-black p-1 rounded-sm ${
+              className={`h-8 p-1 flex justify-center items-center rounded-sm  shadow-lg  shadow-[#0000003a]  text-black  ${
                 mode === "bg-gray-50"
                   ? "bg-gray-50 text-gray-900"
                   : "bg-gray-900 text-gray-50"
@@ -86,7 +78,7 @@ value={movieGeneree} onChange={XX}
             >
               {data &&
                 data.results.map((genere) => {
-                  return (<option  value={genere.name} > {genere.name}</option>)
+                  return (<option key={genere.name}  value={genere.name} > {genere.name}</option>)
                   ;
                 })}
             </select>
@@ -103,7 +95,9 @@ value={movieGeneree} onChange={XX}
               Year
             </span>
             <select
-              className={`h-8 p-1 flex justify-center items-center rounded-sm shadow shadow-lg  shadow-[#0000003a]  text-black p-1 rounded-sm ${
+// value={years}
+onChange={(e)=>getYear(e.target.value)}
+              className={`h-8 p-1 flex justify-center items-center rounded-sm shadow-lg  shadow-[#0000003a]  text-black   ${
                 mode === "bg-gray-50"
                   ? "bg-gray-50 text-gray-900"
                   : "bg-gray-900 text-gray-50"
@@ -112,7 +106,7 @@ value={movieGeneree} onChange={XX}
               {years &&
               
               
-              years.results.map((year) => <option>{year.name}</option>)
+              years.results.map((year) => <option  value={year.name}  key={year.name}>{year.name}</option>)
                 
                 }
             </select>
