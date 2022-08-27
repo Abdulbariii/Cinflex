@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import Search from "../components/SearchBar.js/Search";
 import Cards from "../components/cards/Cards";
+import Pagination from "../components/pagnation/Pagnation";
 
 export default function Movies() {
   const [movieGeneree,setMovieGeneree]=useState(['Animación']);
+
+//
+const [currentPage, setCurrentPage] = useState(2);
+
 
   const [movieTitle,setMovieTitle]=useState('');
 console.log(movieTitle);
@@ -14,6 +19,10 @@ console.log(movieTitle);
       setMovieTitle={setMovieTitle}
       />
       <Cards movieGeneree={movieGeneree} setMovieTitle={setMovieTitle} movieTitle={movieTitle}></Cards>
+
+
+
+      <Pagination/>
     </div>
   );
 }
