@@ -6,11 +6,6 @@ import { AiOutlineClose } from "react-icons/ai";
 import useTheme from '../hook/useTheme';
 const Trailar = () => {
     const {  color } = useTheme();
-
-
-
-
-
     
       const {id}=useParams();
   const url=`https://movies-app1.p.rapidapi.com/api/trailers/${id}`;
@@ -23,7 +18,7 @@ const Trailar = () => {
 
     <div className='
     absolute overflow-y-hidden top-[5rem] backdrop-blur-md  h-[100vh] w-[98vw] flex justify-center  mt-1'>
-        
+
 <motion.button
  whileHover={{ scale: 1.2, rotate: 90}}
  whileTap={{
@@ -36,6 +31,8 @@ className={`right-10 top-5  absolute`} onClick={()=>{Navigate(`/movieDetail/${id
 <AiOutlineClose className={`text-[2rem] ${color} text-white`}/>
 
 </motion.button>
+{isPending&& <h1 className='text-white text-[3rem]'>{isPending}</h1>}
+{error&&<h1 className='text-white text-[3rem]'>{error}</h1>}
 
         {
             data&& <div className='hh z-50 mt-[10%] '>

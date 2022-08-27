@@ -6,10 +6,10 @@ import "./Animation.css";
 export default function MovieCard(props) {
   const { color } = useTheme();
   return (
-    <div className="flex flex-wrap gap-1 ml-20 mr-20">
+    <div className="flex   flex-wrap  gap-5 mx-60">
       {props.movies &&
-        props.movies.results.map((movie) => (
-          <div key={movie._id} className="w-40 rounded-sm card-con  h-60 relative">
+        props.movies.results.slice(props.pagesVisited, props.pagesVisited+props.userPerPage).map((movie) => (
+          <div key={movie._id} className="w-52 rounded-sm card-con  h-72 relative">
             <img
               src={movie.image}
               className="absolute w-full rounded-sm h-full object-cover"

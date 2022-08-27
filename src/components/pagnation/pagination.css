@@ -1,0 +1,13 @@
+
+
+.paginationActive{
+    color: #2b2eff;
+    border: 1px solid #2b2eff;
+    box-shadow: 0.2rem 0.5rem 1rem rgba(0, 0, 0, 0.148);
+}
+.k{
+padding-inline: 0.4rem;
+background-color: #ffff;
+color: black;
+border-radius: 0.5rem;
+}

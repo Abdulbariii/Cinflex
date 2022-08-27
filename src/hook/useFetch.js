@@ -6,9 +6,8 @@ export const useFetch = (url) => {
   const [error, setError] = useState(null);
   const options = {
     method: 'GET',
-    url: 'https://movies-app1.p.rapidapi.com/api/genres',
     headers: {
-      'X-RapidAPI-Key': '47fda72920mshd955c1cc7203dc6p13b76ejsn79a730c64569',
+      'X-RapidAPI-Key': 'bebf8be787mshb2b4237a28f4e93p1ea88fjsn121587fcbbd8',
       'X-RapidAPI-Host': 'movies-app1.p.rapidapi.com'
     }
   };
