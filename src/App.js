@@ -1,11 +1,10 @@
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
 import MovieDetail from "./pages/MovieDetail";
 import Navigation from "./components/Navigation/Navigation";
-import { themeContext } from "./components/themes/ContextTheme";
 import ThemeSelector from "./components/themes/ThemeSelector";
 import useTheme from "./hook/useTheme";
 import Trailar from "./pages/Trailar";
