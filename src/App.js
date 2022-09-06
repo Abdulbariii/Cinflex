@@ -8,55 +8,43 @@ import Navigation from "./components/Navigation/Navigation";
 import ThemeSelector from "./components/themes/ThemeSelector";
 import useTheme from "./hook/useTheme";
 import Trailar from "./pages/Trailar";
-import styled from "styled-components";
 import SignUp from "./pages/form/SignUp";
-
+import { useLocation } from "react-router-dom";
 function App() {
-  const { mode } = useTheme();
+  const location = useLocation();
+  console.log("pathname", location.pathname);
+  const pathGen = () => {
+    switch (location.pathname) {
+      case "/":
+        return "bg-home";
+      case "/movies":
+        return "bg-movie";
+      case "/about":
+        return "bg-about";
+
+      default:
+        return "bg-home";
+    }
+  };
 
   return (
-    <div>
-      <Scroll className={`App ${mode}  min-h-screen  `}>
-        <Navigation></Navigation>
+    <div
+      className={` transition-all  duration-200 ${pathGen()}  min-h-screen w-full`}
+    >
+      <Navigation></Navigation>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="/SignUp" element={<SignUp />} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/SignUp" element={<SignUp />} />
 
-          <Route path="/movieDetail/:id" element={<MovieDetail />}>
-            <Route path="trailar" element={<Trailar />} />
-          </Route>
-        </Routes>
-      </Scroll>
+        <Route path="/movieDetail/:id" element={<MovieDetail />}>
+          <Route path="trailar" element={<Trailar />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
-
-const Scroll = styled.div`
-  * {
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    /* Track */
-    ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px grey;
-      border-radius: 10px;
-    }
-
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background: red;
-      border-radius: 10px;
-    }
-
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: #b30000;
-    }
-  }
-`;
 
 export default App;

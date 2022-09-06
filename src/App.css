@@ -1,3 +1,20 @@
-*{
-    padding: 0%;
+.bg-home {
+  background-image: url("./img/dunk.jpg");
+  background-repeat: no-repeat;
+
+  background-size: cover;
+}
+
+.bg-movie {
+  background-image: url("./img/movie-bg.jpg");
+  background-repeat: no-repeat;
+
+  background-size: cover;
+}
+
+.bg-about {
+  background-image: url("./img/about-bg.png");
+  background-repeat: no-repeat;
+
+  background-size: cover;
 }
