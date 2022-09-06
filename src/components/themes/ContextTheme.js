@@ -7,69 +7,81 @@ const themeReducer = (state, action) => {
       return { ...state, color: action.payload };
     case "CHANGE_MODE":
       return { ...state, mode: action.payload };
-      case 'GET_YEAR':
-        return{...state,year:action.payload};
-        case 'GET_GENER':
-          return{...state,gener:action.payload};
-          case 'GET_TITLE':
-            return{...state,title:action.payload};
-            case 'GET_PAGE':
-              return{...state,page:action.payload};
-      default:
+    case "GET_YEAR":
+      return { ...state, year: action.payload };
+    case "GET_GENER":
+      return { ...state, gener: action.payload };
+    case "GET_TITLE":
+      return { ...state, title: action.payload };
+    case "GET_PAGE":
+      return { ...state, page: action.payload };
+    case "OPEN_MENU":
+      return { ...state, openMenu: action.payload };
+    default:
       return state;
-
   }
 };
 //
 export function ContextTheme(props) {
   const [state, distpatch] = useReducer(themeReducer, {
     color: "bg-sky-500",
-   
+
     mode: "bg-gray-900",
 
-    year:'',
+    year: "",
 
-    gener:'',
+    gener: "",
 
-    title:'',
-    
-    page:'6'
+    title: "",
+
+    page: "6",
+
+    openMenu: false,
   });
 
-//
+  //
   const colorChange = (color) => {
     distpatch({ type: "CHANGE_COLOR", payload: color });
   };
-//
+  //
   const colorMode = (mode) => {
     distpatch({ type: "CHANGE_MODE", payload: mode });
   };
-//
-const getYear=(year)=>{
-  distpatch({type:'GET_YEAR',payload:year});
-}
-//
-const getGeners=(gener)=>{
-distpatch({type:'GET_GENER',payload:gener})
-}
+  //
+  const getYear = (year) => {
+    distpatch({ type: "GET_YEAR", payload: year });
+  };
+  //
+  const getGeners = (gener) => {
+    distpatch({ type: "GET_GENER", payload: gener });
+  };
 
-//
-const getTitle=(title)=>{
-  distpatch({type:'GET_TITLE',payload:title})
-}
-//
-const getPage=(page)=>{
-  distpatch({type:'GET_PAGE',payload:page})
-}
+  //
+  const getTitle = (title) => {
+    distpatch({ type: "GET_TITLE", payload: title });
+  };
+  //
+  const getPage = (page) => {
+    distpatch({ type: "GET_PAGE", payload: page });
+  };
 
-
-
-
-
-
+  const openNavbar = (menu) => {
+    distpatch({ type: "OPEN_MENU", payload: menu });
+  };
 
   return (
-    <themeContext.Provider value={{ ...state, colorChange, colorMode,getYear,getGeners,getTitle,getPage}}>
+    <themeContext.Provider
+      value={{
+        ...state,
+        colorChange,
+        openNavbar,
+        colorMode,
+        getYear,
+        getGeners,
+        getTitle,
+        getPage,
+      }}
+    >
       {props.children}
     </themeContext.Provider>
   );
