@@ -9,7 +9,7 @@ export default function Title() {
     <div className="mt-16">
       <div className="flex flex-col justify-around items-center gap-20 pt-10 ">
         <h1 className=" text-transparent text-center font-title md:text-6xl lg:text-8xl text-5xl  bg-clip-text bg-gradient-to-r from-purple-100 to-white ">
-          Good{" "}
+          Go0d{" "}
           <span className=" decoration-cyan-400 underline-offset-4 underline decoration-2">
             Films
           </span>{" "}
