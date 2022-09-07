@@ -10,7 +10,7 @@ export default function Menu() {
         onClick={() => {
           openNavbar(openMenu ? false : true);
         }}
-        className="text-4xl transition-all duration-200 text-black md:hidden"
+        className="text-4xl transition-all duration-200 text-white md:hidden"
       >
         {openMenu ? (
           <AiOutlineClose></AiOutlineClose>

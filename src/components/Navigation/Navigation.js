@@ -7,7 +7,7 @@ export default function Navigation() {
   const { color, openMenu } = useTheme();
   return (
     <div
-      className={`flex flex-col md:flex-row justify-between px-3 py-2 origin-bottom-right   transition-all duration-200   overflow-hidden ${
+      className={`flex flex-col md:flex-row  bg-transparent justify-between   origin-bottom-right   transition-all duration-200   overflow-hidden ${
         openMenu ? "h-40" : "h-16"
       } w-full items-start  md:items-center `}
     >

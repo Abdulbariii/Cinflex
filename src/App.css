@@ -1,5 +1,10 @@
 .bg-home {
-  background-image: url("./img/dunk.jpg");
+  background-image: linear-gradient(
+      to left top,
+      rgba(0, 0, 0, 0.929),
+      rgba(19, 0, 128, 0.5)
+    ),
+    url("./img/1134920.jpg");
   background-repeat: no-repeat;
 
   background-size: cover;

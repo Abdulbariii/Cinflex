@@ -1,10 +1,10 @@
 import React from "react";
 import useTheme from "../../hook/useTheme";
-import logo from "../img/brightness.png";
+import logo from "../../img/brightness.png";
 export default function ThemeSelector() {
   const colors = ["bg-sky-500", "bg-red-500", "bg-yellow-500", "bg-purple-500"];
 
-  const {  colorChange, colorMode, mode } = useTheme();
+  const { colorChange, colorMode, mode } = useTheme();
   const modeToggle = () => {
     colorMode(mode === "bg-gray-50" ? "bg-gray-900" : "bg-gray-50");
   };
