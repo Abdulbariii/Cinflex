@@ -19,13 +19,13 @@ function App() {
         return "bg-home";
 
       default:
-        return "bg-black";
+        return "bg-other";
     }
   };
 
   return (
     <div
-      className={`  px-10 py-2  lg:px-20  ${pathGen()}  min-h-screen w-full`}
+      className={`  px-10 py-2  lg:px-20   ${pathGen()}  min-h-screen w-full`}
     >
       <Navigation></Navigation>
 

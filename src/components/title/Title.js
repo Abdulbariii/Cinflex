@@ -14,7 +14,7 @@ export default function Title() {
             Films
           </span>{" "}
           Make Your Life{" "}
-          <span className="decoration-red-400 underline-offset-4 underline decoration-2">
+          <span className="decoration-red-400 scale-125 underline-offset-4 underline decoration-2">
             {" "}
             Better
           </span>

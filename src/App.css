@@ -17,8 +17,13 @@
   background-size: cover;
 }
 
-.bg-about {
-  background-image: url("./img/about-bg.png");
+.bg-other {
+  background-image: linear-gradient(
+      to left top,
+      rgba(0, 0, 0, 0.964),
+      rgba(15, 3, 76, 0.842)
+    ),
+    url("./img/1134920.jpg");
   background-repeat: no-repeat;
 
   background-size: cover;
