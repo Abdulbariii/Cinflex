@@ -12,11 +12,10 @@ export default function Search() {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "0e1aa90e06mshe6e538a59c86545p1acc12jsnde0b1704f0de",
+      "X-RapidAPI-Key": "b97fd92391msh2e8d1a1d0498496p111129jsn1d40728ef148",
       "X-RapidAPI-Host": "movies-app1.p.rapidapi.com",
     },
   };
-
   useEffect(() => {
     fetch("https://movies-app1.p.rapidapi.com/api/years", options)
       .then((response) => response.json())
@@ -26,24 +25,15 @@ export default function Search() {
 
   return (
     <div className="flex items-center">
-      <form className="flex gap-2 p-2 items-center justify-around ">
+      <form className="flex flex-col  gap-5 p-2 items-start justify-around ">
         <div>
           <label className="flex flex-col gap-2 ">
-            <span
-              className={`${
-                mode === "bg-gray-50" ? " text-gray-900" : " text-gray-50"
-              }`}
-            >
-              Search
-            </span>
             {/* input */}
 
             <input
               onChange={(e) => getTitle(e.target.value)}
               placeholder="Search"
-              className={`w-72 h-8  shadow-lg  shadow-[#0000003a]  text-black p-1 rounded-sm ${
-                mode === "bg-gray-50" ? "bg-gray-50" : "bg-gray-900"
-              }`}
+              className={`w-72 h- fit  rounded-3xl  shadow-lg  shadow-[#0000003a]   px-5 py-2  text-xl text-white bg-black`}
             />
           </label>
         </div>

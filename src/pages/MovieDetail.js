@@ -40,7 +40,11 @@ lg:flex-row
           <div>
             <img
               className="h-fit -z-50 max-w-none  "
-              src={data.result.image}
+              src={
+                data.result.image
+                  ? data.result.image
+                  : "https://delpireandco.com/wp-content/uploads/2021/08/erwitt-found-not-lost-1-scaled.jpg"
+              }
               alt=""
             />
           </div>

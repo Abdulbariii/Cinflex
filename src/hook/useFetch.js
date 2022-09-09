@@ -7,7 +7,7 @@ export const useFetch = (url) => {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "0e1aa90e06mshe6e538a59c86545p1acc12jsnde0b1704f0de",
+      "X-RapidAPI-Key": "b97fd92391msh2e8d1a1d0498496p111129jsn1d40728ef148",
       "X-RapidAPI-Host": "movies-app1.p.rapidapi.com",
     },
   };
