@@ -29,7 +29,11 @@ export default function Navbar() {
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? ` underline  underline-offset-4 decoration-red-400 `
+                ? ` underline  underline-offset-4 ${
+                    nav.navName === "About"
+                      ? "decoration-cyan-500"
+                      : "decoration-red-400"
+                  } `
                 : ` `
             }
             to={nav.navLink}
