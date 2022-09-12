@@ -3,7 +3,7 @@ import { useFetch } from "../../hook/useFetch";
 import MovieCard from "./MovieCard";
 import useTheme from "../../hook/useTheme";
 import NewPagnation from "../pagnation/NewPagnation";
-
+import { ThreeCircles } from "react-loader-spinner";
 export default function Cards() {
   const { year, gener, title } = useTheme();
   console.log(gener);
@@ -23,7 +23,20 @@ export default function Cards() {
   };
   return (
     <div className="flex flex-col relative mt-2 justify-between items-center h-full w-full ">
-      {isPending && <h1>Loading...</h1>}
+      {isPending && (
+        <ThreeCircles
+          height="100"
+          width="100"
+          color="#ef4444"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+          ariaLabel="three-circles-rotating"
+          outerCircleColor=""
+          innerCircleColor=""
+          middleCircleColor=""
+        />
+      )}
       {error && <h1>{error}</h1>}
       {data && (
         <div className="">
