@@ -1,6 +1,6 @@
 import React from "react";
 import Yaqub from "../../img/Yaqub.jpg";
-import Abdulbari from "../../img/Abdulbari_Qaisar.jpg";
+import Abdulbari from "../../img/Abdulbari Qaisar_Iraq_2022.jpg";
 
 import { AiOutlineGithub } from "react-icons/ai";
 export default function Team() {
