@@ -45,10 +45,7 @@ export default function MovieInfo({ data }) {
           <p>Rank: {data.result.rating}</p>
         </div>
         <div>
-          <p className=" ">
-            {" "}
-            description : {data.result && CutText(data.result.description, 30)}
-          </p>
+          <p className=" "> description : {data.result.description}</p>
         </div>
       </div>
       <Outlet></Outlet>
