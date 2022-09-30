@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
+import { CutText } from "../../utility/cutText";
 export default function MovieInfo({ data }) {
   console.log(data);
   return (
@@ -38,15 +39,19 @@ export default function MovieInfo({ data }) {
 
           <p className=" p-2 shadow-lg   text-rose-500">HD</p>
         </div>
-        <div>
+        <div className="text-2xl">
           <p>Release: {data.result.release}</p>
           <p className="font">Genere: {data.result.genres[0].name}</p>
           <p>Rank: {data.result.rating}</p>
         </div>
         <div>
-          <p className=" "> description :{data.result.description}</p>
+          <p className=" ">
+            {" "}
+            description : {data.result && CutText(data.result.description, 30)}
+          </p>
         </div>
       </div>
+      <Outlet></Outlet>
     </div>
   );
 }
