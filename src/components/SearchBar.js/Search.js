@@ -13,10 +13,11 @@ export default function Search() {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "b97fd92391msh2e8d1a1d0498496p111129jsn1d40728ef148",
+      "X-RapidAPI-Key": "4b40e1034cmshbb08bee3fd39ed0p1fbc56jsn085af3231bbb",
       "X-RapidAPI-Host": "movies-app1.p.rapidapi.com",
     },
   };
+
   useEffect(() => {
     fetch("https://movies-app1.p.rapidapi.com/api/years", options)
       .then((response) => response.json())

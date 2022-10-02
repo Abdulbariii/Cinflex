@@ -39,13 +39,30 @@ export default function MovieInfo({ data }) {
 
           <p className=" p-2 shadow-lg   text-rose-500">HD</p>
         </div>
-        <div className="text-2xl">
-          <p>Release: {data.result.release}</p>
-          <p className="font">Genere: {data.result.genres[0].name}</p>
-          <p>Rank: {data.result.rating}</p>
+        <div className="text-xl flex flex-wrap gap-4 items-center bg-gradient-to-r from-teal-500   p-3 bg-opacity-45   transition-all rounded-xl">
+          <p>
+            {" "}
+            <span className="  font-medium">Release:</span>{" "}
+            {data.result.release}
+          </p>
+          <p className="font">
+            {" "}
+            <span className="  font-medium">Gener: </span>{" "}
+            {data.result.genres[0].name}
+          </p>
+          <p>
+            {" "}
+            <span className=" text-amber-500 font-medium">Rating: </span>
+            {data.result.rating}
+          </p>
         </div>
-        <div>
-          <p className=" "> description : {data.result.description}</p>
+
+        <div className=" bg-gradient-to-r from-rose-500 p-3 bg-opacity-45  rounded-xl ">
+          <h1 className="text-3xl font-medium mb-4"> Description </h1>
+          <p className="font-cool text-xl   ">
+            {" "}
+            {CutText(data.result.description, 300)}
+          </p>
         </div>
       </div>
       <Outlet></Outlet>
