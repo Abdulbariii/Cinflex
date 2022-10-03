@@ -30,7 +30,7 @@ export default function MovieInfo({ data }) {
           {/* btn */}
 
           <div>
-            <h1 className="bold text-5xl font-cool  ">
+            <h1 className="bold text-7xl font-cool  ">
               {data.result.titleOriginal}{" "}
             </h1>
           </div>
@@ -73,7 +73,7 @@ export default function MovieInfo({ data }) {
 
           <div className=" bg-gradient-to-r w-[40rem] from-rose-500 p-3 bg-opacity-45  rounded-xl ">
             <h1 className="text-3xl font-medium mb-4"> Description </h1>
-            <p className="font-cool text-xl   ">
+            <p className="font-cool text-lg  ">
               {" "}
               {CutText(data.result.description, 300)}
             </p>
