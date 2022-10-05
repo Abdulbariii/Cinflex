@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { CutText } from "../../utility/cutText";
+import PlayMovies from "./PlayMovies";
 export default function MovieInfo({ data }) {
   console.log(data);
 
@@ -17,7 +18,7 @@ export default function MovieInfo({ data }) {
       <div className="flex justify-between gap-20 items-start w-full h-full text-white ">
         <div>
           <img
-            className="h-[30rem] max-w-none object-cover  "
+            className="h-[30rem] rounded-md max-w-none object-cover  "
             src={
               data.result.image
                 ? data.result.image
@@ -51,9 +52,9 @@ export default function MovieInfo({ data }) {
               </p>
             </Link>
 
-            <p className=" p-2 shadow-lg   text-rose-500">HD</p>
+            <p className=" p-2 shadow-lg   text-slate-500">HD</p>
           </div>
-          <div className="text-xl flex flex-wrap gap-4 items-center bg-gradient-to-r from-teal-500   p-3 bg-opacity-45   transition-all rounded-xl">
+          <div className="text-xl flex flex-wrap gap-4 items-center bg-gradient-to-r from-slate-900   p-3 bg-opacity-45   transition-all rounded-xl">
             <p>
               {" "}
               <span className="  font-medium">Release:</span>{" "}
@@ -71,7 +72,7 @@ export default function MovieInfo({ data }) {
             </p>
           </div>
 
-          <div className=" bg-gradient-to-r w-[40rem] from-rose-500 p-3 bg-opacity-45  rounded-xl ">
+          <div className=" bg-gradient-to-r w-[40rem] from-[#f43f5d39]  p-3  rounded-xl ">
             <h1 className="text-3xl font-medium mb-4"> Description </h1>
             <p className="font-cool text-lg  ">
               {" "}
@@ -82,8 +83,8 @@ export default function MovieInfo({ data }) {
         <Outlet></Outlet>
       </div>
 
-      <div ref={watchSection} className="h-[50vh] w-full bg-red-200">
-        <h1>Hello world</h1>
+      <div ref={watchSection}>
+        <PlayMovies dataServer={data && data.result.embedUrls}></PlayMovies>
       </div>
     </div>
   );
