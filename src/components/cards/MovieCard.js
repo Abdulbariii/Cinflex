@@ -13,7 +13,7 @@ export default function MovieCard(props) {
         props.movies.results
           .slice(props.pagesVisited, props.pagesVisited + props.userPerPage)
           .map((movie) => (
-            <div key={movie._id} className="w-40  card-con  h-52   relative">
+            <div key={movie._id} className="w-44  card-con  h-60   relative">
               <img
                 src={movie.image && movie.image}
                 className="absolute w-full  h-full object-cover"

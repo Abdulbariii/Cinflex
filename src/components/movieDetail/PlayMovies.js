@@ -46,7 +46,7 @@ export default function PlayMovies({ dataServer }) {
               onClick={() => {
                 setServer(server.value);
               }}
-              className="text-xl  p-3 bg-gradient-to-r text-white cursor-pointer from-[#f43f5d39] border-white"
+              className="text-xl  p-3 bg-gradient-to-r from-[#f43f5d39] text-white cursor-pointer  border-white"
               key={server.value}
             >
               {server.nameServer}

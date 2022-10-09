@@ -35,22 +35,22 @@ export default function Search() {
             <input
               onChange={(e) => getTitle(e.target.value)}
               placeholder="Search"
-              className={`w-80 h- fit relative   rounded-3xl  shadow-lg  shadow-[#0000003a]   px-14 py-2  text-xl text-white bg-black`}
+              className={`w-64 h-10 fit relative   rounded-3xl  shadow-lg  shadow-[#0000003a] border-2 border-rose-500 hover:border-opacity-50 outline-none border-opacity-30 px-14 py-2  text-lg text-white bg-slate-900`}
             />
-            <div className=" absolute top-2 left-2 ">
+            <div className=" text-3xl absolute top-3 ml-2 left-2 ">
               <AiOutlineSearch></AiOutlineSearch>
             </div>
           </label>
         </div>
 
         <label className="flex flex-col gap-2  text-rose-500 w-52 p-2">
-          <span className={` text-slate-600 font-medium text-lg`}>Geners</span>
+          <span className={` text-slate-400 font-medium text-lg`}>Geners</span>
 
           <select
             onChange={(e) => {
               getGeners(e.target.value.toLowerCase());
             }}
-            className={`h-12 text-center  text-2xl rounded-3xl flex justify-center w-52 text-rose-500 items-center  shadow-lg    bg-black`}
+            className={`h-10 text-center  text-xl rounded-3xl flex hover:border-opacity-50 outline-none border-opacity-30 justify-center w-40 text-rose-500 items-center  shadow-lg  border-2 border-rose-500   bg-slate-900`}
           >
             {data &&
               data.results.map((genere) => {
@@ -69,11 +69,11 @@ export default function Search() {
         </label>
 
         <label className="flex flex-col gap-2  p-2">
-          <span className={` text-slate-600 font-medium text-lg`}>Year</span>
+          <span className={` text-slate-400 font-medium text-lg`}>Year</span>
           <select
             // value={years}
             onChange={(e) => getYear(e.target.value)}
-            className={`h-12 text-center  text-2xl rounded-3xl flex justify-center w-52 text-rose-500 items-center  shadow-lg    bg-black`}
+            className={`h-10 text-center  text-xl rounded-3xl flex justify-center w-40 hover:border-opacity-50 outline-none border-opacity-30 border-2 border-rose-500 text-rose-500 items-center  shadow-lg    bg-slate-900`}
           >
             {years &&
               years.results.map((year) => (
