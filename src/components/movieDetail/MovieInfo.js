@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { CutText } from "../../utility/cutText";
 import PlayMovies from "./PlayMovies";
+
+import Hr from "../lines/Hr";
 export default function MovieInfo({ data }) {
   console.log(data);
 
@@ -82,7 +84,7 @@ export default function MovieInfo({ data }) {
         </div>
         <Outlet></Outlet>
       </div>
-
+      <Hr></Hr>
       <div ref={watchSection}>
         <PlayMovies dataServer={data && data.result.embedUrls}></PlayMovies>
       </div>

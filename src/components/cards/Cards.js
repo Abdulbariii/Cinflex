@@ -39,7 +39,7 @@ export default function Cards() {
       )}
       {error && <h1>{error}</h1>}
       {data && (
-        <div className="">
+        <div className="mb-6">
           <MovieCard
             movies={data}
             pagesVisited={pagesVisited}
@@ -50,7 +50,7 @@ export default function Cards() {
 
       {/* creating pagnation */}
       {!isPending && (
-        <div className="absolute -bottom-20 left-2/4 translate-x-[-50%]">
+        <div className="absolute -bottom-24 left-2/4 translate-x-[-50%]">
           <NewPagnation pageCount={pageCount} changePage={changePage} />
         </div>
       )}

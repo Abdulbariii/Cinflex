@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
+import Hr from "../lines/Hr";
 export default function PlayMovies({ dataServer }) {
   const servers = [
     {
@@ -27,30 +27,37 @@ export default function PlayMovies({ dataServer }) {
       nameServer: "Server 7",
       value: 7,
     },
+    {
+      nameServer: "Server 8",
+      value: 2,
+    },
   ];
 
   const [server, setServer] = useState(8);
 
   return (
-    <div className=" flex gap-10 relative mt-20 w-full justify-between items-start">
+    <div className=" flex gap-10 relative  w-full justify-between items-start">
       <iframe
         src={dataServer && dataServer[server].url}
-        className="h-[30rem] w-[55rem] "
+        className="h-[31rem] rounded-md w-[55rem] "
         title="Iframe Example"
       ></iframe>
 
       <div>
-        <ul className="flex flex-col rounded-xl gap-2    ">
+        <ul className="flex flex-col bg-gradient-to-r from-[#f43f5d39] rounded-md gap-2    ">
           {servers.map((server) => (
-            <li
-              onClick={() => {
-                setServer(server.value);
-              }}
-              className="text-xl  p-3 bg-gradient-to-r from-[#f43f5d39] text-white cursor-pointer  border-white"
-              key={server.value}
-            >
-              {server.nameServer}
-            </li>
+            <div>
+              <li
+                onClick={() => {
+                  setServer(server.value);
+                }}
+                className="text-xl hover:scale-110 transition-all  p-3  text-white cursor-pointer  "
+                key={server.value}
+              >
+                {server.nameServer}
+              </li>
+              <Hr></Hr>
+            </div>
           ))}
         </ul>
       </div>
