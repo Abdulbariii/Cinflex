@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { CutText } from "../../utility/cutText";
 import PlayMovies from "./PlayMovies";
-
+import Recommend from "./Recommend";
 import Hr from "../lines/Hr";
 export default function MovieInfo({ data }) {
   console.log(data);
@@ -87,6 +87,11 @@ export default function MovieInfo({ data }) {
       <Hr></Hr>
       <div ref={watchSection}>
         <PlayMovies dataServer={data && data.result.embedUrls}></PlayMovies>
+      </div>
+
+      <Hr></Hr>
+      <div ref={watchSection}>
+        <Recommend genres={data && data.result.genres[0].uuid}></Recommend>
       </div>
     </div>
   );

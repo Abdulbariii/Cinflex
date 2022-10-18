@@ -13,6 +13,7 @@ export default function Cards() {
   page=4&limit=23&year=${year}&genres=${gener}`;
 
   const { data, isPending, error } = useFetch(url);
+  console.log(data && data);
   const [pageNumber, setPageNumber] = useState(0);
   const userPerPage = 10;
   const pagesVisited = pageNumber * userPerPage;
