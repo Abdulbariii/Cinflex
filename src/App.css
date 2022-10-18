@@ -1,31 +1,7 @@
 .bg-home {
-  background-image: linear-gradient(
-      to left top,
-      rgba(0, 0, 0, 0.929),
-      rgba(19, 0, 128, 0.5)
-    ),
-    url("./img/1134920.jpg");
-  background-repeat: no-repeat;
-
-  background-size: cover;
-}
-
-.bg-movie {
-  background-image: url("./img/movie-bg.jpg");
-  background-repeat: no-repeat;
-
-  background-size: cover;
+  background-color: black;
 }
 
 .bg-other {
-  background-image: linear-gradient(
-      to left top,
-
-      rgba(15, 3, 76, 0.919),
-      rgba(0, 0, 0, 0.964)
-    ),
-    url("./img/1134920.jpg");
-  background-repeat: no-repeat;
-
-  background-size: cover;
+  background-color: black;
 }

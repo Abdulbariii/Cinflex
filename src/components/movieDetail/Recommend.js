@@ -16,7 +16,7 @@ export default function Recommend({ genres }) {
           data.results.map((e) => (
             <div className="flex flex-col items-start justify-start gap-3">
               <img
-                className="h-96 w-60 object-cover "
+                className="h-96 w-72 object-cover "
                 src={
                   e.image
                     ? e.image

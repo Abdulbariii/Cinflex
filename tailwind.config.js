@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         cool: ["Source Sans Pro", "sans-serif"],
         title: ["Anton", "sans-serif"],
+        Main: ["Poppins", "sans-serif"],
       },
     },
   },
