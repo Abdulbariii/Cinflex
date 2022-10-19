@@ -16,7 +16,7 @@ export default function MovieDetail() {
   const Navigate = useNavigate();
 
   return (
-    <div className=" md:px-40 py-5  min-h-screen w-full">
+    <div className="  py-5  min-h-screen w-full">
       {data && <MovieInfo data={data}></MovieInfo>}
     </div>
   );
