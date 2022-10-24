@@ -9,8 +9,8 @@ const NewPagnation = ({ pageCount, changePage }) => {
     <div>
       {/* creating pagination */}
       <ReactPaginate
-        className=" hover:border-opacity-50 outline-none border-opacity-30 border-2 border-rose-500   flex transition-all duration-150 text-slate-600 font-medium p-2 items-center  rounded-3xl bg-slate-900 w-fit justify-center 
-gap-4  text-xl my-12"
+        className=" mt-12 flex transition-all duration-150 text-white border-2 border-white font-Main  items-center     justify-center 
+gap-4  text-3xl px-12 py-2"
         previousLabel={<AiOutlineLeft></AiOutlineLeft>}
         nextLabel={<AiOutlineRight></AiOutlineRight>}
         pageCount={pageCount}

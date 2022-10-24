@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import Dashboard from "../components/Navigation/Dashboard";
 export default function Movies() {
   return (
-    <div className="flex gap-5 py-5">
+    <div className="flex justify-start items-start flex-col gap-5 py-5">
       <div>
         <Dashboard></Dashboard>
       </div>

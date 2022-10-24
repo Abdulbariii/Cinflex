@@ -28,36 +28,34 @@ export default function Search() {
 
   return (
     <div className="flex items-center">
-      <form className="flex flex-col  gap-5 p-2 items-start justify-around ">
-        <div>
-          <label className="relative text-4xl text-rose-900">
-            {/* input */}
+      <form className="flex text-white  font-Main gap-5 p-2 items-end justify-around ">
+        <label className="relative text-4xl ">
+          {/* input */}
 
-            <input
-              onChange={(e) => getTitle(e.target.value)}
-              placeholder="Search"
-              className={`w-64 h-10 fit relative   rounded-3xl  shadow-lg  shadow-[#0000003a] border-2 border-rose-500 hover:border-opacity-50 outline-none border-opacity-30 px-14 py-2  text-lg text-white bg-slate-900`}
-            />
-            <div className=" text-3xl absolute top-3 ml-2 left-2 ">
-              <AiOutlineSearch></AiOutlineSearch>
-            </div>
-          </label>
-        </div>
+          <input
+            onChange={(e) => getTitle(e.target.value)}
+            placeholder="Search"
+            className={`w-96 border-2 border-white h-12    text-2xl   bg-black px-14   text-white `}
+          />
+          <div className=" text-3xl absolute top-3 ml-2 left-2 ">
+            <AiOutlineSearch></AiOutlineSearch>
+          </div>
+        </label>
 
-        <label className="flex flex-col gap-2  text-rose-500 w-52 p-2">
-          <span className={` text-slate-400 font-medium text-lg`}>Geners</span>
+        <label className="flex text-white flex-col gap-2   w-52 ">
+          <span className={`font-Main  text-lg`}>Geners</span>
 
           <select
             onChange={(e) => {
               getGeners(e.target.value.toLowerCase());
             }}
-            className={`h-10 text-center  text-xl rounded-3xl flex hover:border-opacity-50 outline-none border-opacity-30 justify-center w-40 text-rose-500 items-center  shadow-lg  border-2 border-rose-500   bg-slate-900`}
+            className={`bg-black w-60 h-12 border-2 border-white text-2xl`}
           >
             {data &&
               data.results.map((genere) => {
                 return (
                   <option
-                    className="text-rose-500"
+                    className="text-white"
                     key={genere.name && genere.name}
                     value={genere.name && genere.name}
                   >
@@ -69,12 +67,12 @@ export default function Search() {
           </select>
         </label>
 
-        <label className="flex flex-col gap-2  p-2">
-          <span className={` text-slate-400 font-medium text-lg`}>Year</span>
+        <label className="flex text-white flex-col gap-2   w-52 ">
+          <span className={` font-Main  text-lg`}>Year</span>
           <select
             // value={years}
             onChange={(e) => getYear(e.target.value)}
-            className={`h-10 text-center  text-xl rounded-3xl flex justify-center w-40 hover:border-opacity-50 outline-none border-opacity-30 border-2 border-rose-500 text-rose-500 items-center  shadow-lg    bg-slate-900`}
+            className={`bg-black w-60 h-12 border-2 border-white text-2xl`}
           >
             {years &&
               years.results.map((year) => (

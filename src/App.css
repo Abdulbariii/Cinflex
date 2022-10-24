@@ -5,3 +5,16 @@
 .bg-other {
   background-color: black;
 }
+
+.btn-bg {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(33, 39, 36, 0.316),
+      rgb(0, 0, 0)
+    ),
+    url(https://images.alphacoders.com/111/1115610.jpg);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 20%;
+}

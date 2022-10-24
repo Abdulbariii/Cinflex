@@ -2,3 +2,12 @@
   height: 100%;
   padding: 10px;
 }
+
+.card-con:hover .img-scale {
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.card-con {
+  overflow: hidden;
+}

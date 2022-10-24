@@ -24,22 +24,18 @@ export default function Navbar() {
 
   return (
     <div className={""}>
-      <nav className="flex justify-around gap-5 m-3 md:m-0 text-lg text-white  flex-wrap transition-all duration-200 ">
+      <nav className="flex font-Main justify-around gap-5 m-3 md:m-0 text-lg text-white  flex-wrap transition-all duration-200 ">
         {navbars.map((nav) => (
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? ` underline  underline-offset-4 ${
-                    nav.navName === "About"
-                      ? "decoration-cyan-500"
-                      : "decoration-red-400"
-                  } `
+                ? ` underline  underline-offset-4 decoration-green-500 `
                 : ` `
             }
             to={nav.navLink}
             key={nav.navLink}
           >
-            <h1 className="hover:scale-105 font-cool font-extralight  hover:text-slate-300 transition-all ">
+            <h1 className="hover:scale-105  font-extralight  hover:text-slate-300 transition-all ">
               {" "}
               {nav.navName}
             </h1>

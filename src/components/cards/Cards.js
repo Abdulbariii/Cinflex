@@ -15,7 +15,7 @@ export default function Cards() {
   const { data, isPending, error } = useFetch(url);
   console.log(data && data);
   const [pageNumber, setPageNumber] = useState(0);
-  const userPerPage = 10;
+  const userPerPage = 8;
   const pagesVisited = pageNumber * userPerPage;
 
   const pageCount = Math.ceil(24 / userPerPage);
@@ -28,7 +28,7 @@ export default function Cards() {
         <ThreeCircles
           height="100"
           width="100"
-          color="#ef4444"
+          color="#fff"
           wrapperStyle={{}}
           wrapperClass=""
           visible={true}
@@ -51,7 +51,7 @@ export default function Cards() {
 
       {/* creating pagnation */}
       {!isPending && (
-        <div className="absolute -bottom-24 left-2/4 translate-x-[-50%]">
+        <div className="">
           <NewPagnation pageCount={pageCount} changePage={changePage} />
         </div>
       )}
