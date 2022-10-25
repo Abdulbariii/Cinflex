@@ -23,7 +23,7 @@ export default function Cards() {
     setPageNumber(selected);
   };
   return (
-    <div className="flex flex-col relative mt-2 justify-between items-center h-full w-full ">
+    <div className="flex flex-col relative mt-2 justify-between items-start h-full w-full ">
       {isPending && (
         <ThreeCircles
           height="100"

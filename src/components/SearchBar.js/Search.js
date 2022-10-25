@@ -27,8 +27,8 @@ export default function Search() {
   }, []);
 
   return (
-    <div className="flex items-center">
-      <form className="flex text-white  font-Main gap-5 p-2 items-end justify-around ">
+    <div className="flex items-center w-full">
+      <form className="flex text-white  font-Main  p-2 items-end justify-between gap-44 w-full ">
         <label className="relative text-4xl ">
           {/* input */}
 
@@ -41,47 +41,48 @@ export default function Search() {
             <AiOutlineSearch></AiOutlineSearch>
           </div>
         </label>
+        <div className="flex gap-20">
+          <label className="flex text-white flex-col gap-2   w-52 ">
+            <span className={`font-Main  text-lg`}>Geners</span>
 
-        <label className="flex text-white flex-col gap-2   w-52 ">
-          <span className={`font-Main  text-lg`}>Geners</span>
+            <select
+              onChange={(e) => {
+                getGeners(e.target.value.toLowerCase());
+              }}
+              className={`bg-black w-60 h-12 border-2 border-white text-2xl`}
+            >
+              {data &&
+                data.results.map((genere) => {
+                  return (
+                    <option
+                      className="text-white"
+                      key={genere.name && genere.name}
+                      value={genere.name && genere.name}
+                    >
+                      {" "}
+                      {genere.name && genere.name}
+                    </option>
+                  );
+                })}
+            </select>
+          </label>
 
-          <select
-            onChange={(e) => {
-              getGeners(e.target.value.toLowerCase());
-            }}
-            className={`bg-black w-60 h-12 border-2 border-white text-2xl`}
-          >
-            {data &&
-              data.results.map((genere) => {
-                return (
-                  <option
-                    className="text-white"
-                    key={genere.name && genere.name}
-                    value={genere.name && genere.name}
-                  >
-                    {" "}
-                    {genere.name && genere.name}
+          <label className="flex text-white flex-col gap-2   w-52 ">
+            <span className={` font-Main  text-lg`}>Year</span>
+            <select
+              // value={years}
+              onChange={(e) => getYear(e.target.value)}
+              className={`bg-black w-60 h-12 border-2 border-white text-2xl`}
+            >
+              {years &&
+                years.results.map((year) => (
+                  <option value={year.name} key={year.name}>
+                    {year.name}
                   </option>
-                );
-              })}
-          </select>
-        </label>
-
-        <label className="flex text-white flex-col gap-2   w-52 ">
-          <span className={` font-Main  text-lg`}>Year</span>
-          <select
-            // value={years}
-            onChange={(e) => getYear(e.target.value)}
-            className={`bg-black w-60 h-12 border-2 border-white text-2xl`}
-          >
-            {years &&
-              years.results.map((year) => (
-                <option value={year.name} key={year.name}>
-                  {year.name}
-                </option>
-              ))}
-          </select>
-        </label>
+                ))}
+            </select>
+          </label>
+        </div>
       </form>
     </div>
   );
