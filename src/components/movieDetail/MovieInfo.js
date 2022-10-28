@@ -7,6 +7,7 @@ import Hr from "../lines/Hr";
 import { MdOutlineLocalMovies } from "react-icons/md";
 import { RiMovie2Line } from "react-icons/ri";
 import Vr from "../lines/Vr";
+import PlaySeries from "./PlaySeries";
 export default function MovieInfo({ data }) {
   console.log(data);
 
@@ -20,9 +21,9 @@ export default function MovieInfo({ data }) {
   };
   return (
     <div className="flex flex-col gap-28 py-10">
-      <div className="flex gap-36 items-start w-full h-full text-white ">
+      <div className="flex gap-36 items-center w-full h-full text-white ">
         <img
-          className="h-[35rem] w-[32rem] object-cover  "
+          className="h-[40rem] w-[32rem] object-cover  "
           src={
             data.result.image
               ? data.result.image.replace("w300", "w500")
@@ -96,10 +97,13 @@ export default function MovieInfo({ data }) {
       </div>
 
       <div ref={watchSection}>
-        <PlayMovies dataServer={data && data.result.embedUrls}></PlayMovies>
+        {data && data.result.embedUrls && data.result.embedUrls.length == 0 ? (
+          <PlaySeries></PlaySeries>
+        ) : (
+          <PlayMovies dataServer={data && data.result.embedUrls}></PlayMovies>
+        )}
       </div>
 
-      <Hr></Hr>
       <div ref={watchSection}>
         <Recommend genres={data && data.result.genres[0].uuid}></Recommend>
       </div>

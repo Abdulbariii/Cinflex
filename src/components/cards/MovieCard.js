@@ -2,23 +2,27 @@ import React from "react";
 import { Link } from "react-router-dom";
 import useTheme from "../../hook/useTheme";
 import "./Animation.css";
-
+import Hr from "../lines/Hr";
 import { AiOutlinePlayCircle } from "react-icons/ai";
 export default function MovieCard(props) {
   const { color } = useTheme();
   return (
-    <div className="flex  flex-wrap  gap-6 ">
+    <div className="flex  flex-wrap  gap-3 ">
       {props.movies &&
         props.movies.results &&
         props.movies.results
           .slice(props.pagesVisited, props.pagesVisited + props.userPerPage)
           .map((movie) => (
-            <div key={movie._id} className="w-64 card-con  h-96  relative">
+            <div
+              key={movie._id}
+              className="w-72 mb-20 card-con  h-[30rem]  relative"
+            >
               <img
                 src={movie.image && movie.image.replace("w300", "w500")}
                 className="absolute w-full transition-all duration-150 img-scale h-full object-cover"
                 alt="img"
               />
+
               <div
                 className={`absolute bottom-0 mt-5 card bg-slate-900 rounded-none font-cool    bg-opacity-90 flex transition-all justify-around items-center flex-col h-0    overflow-hidden w-full`}
               >
@@ -32,6 +36,7 @@ export default function MovieCard(props) {
                 >
                   <AiOutlinePlayCircle></AiOutlinePlayCircle>
                 </Link>
+                <Hr></Hr>
               </div>
             </div>
           ))}
