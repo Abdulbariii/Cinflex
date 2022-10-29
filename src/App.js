@@ -10,7 +10,7 @@ import useTheme from "./hook/useTheme";
 import Trailar from "./pages/Trailar";
 import SignUp from "./pages/form/SignUp";
 import { useLocation } from "react-router-dom";
-
+import Footer from "./components/footer/Footer";
 function App() {
   const location = useLocation();
   console.log("pathname", location.pathname);
@@ -40,6 +40,8 @@ function App() {
           <Route path="trailar" element={<Trailar />} />
         </Route>
       </Routes>
+
+      <Footer></Footer>
     </div>
   );
 }
