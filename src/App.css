@@ -25,7 +25,7 @@
 
 .swiper-pagination-bullet {
   background-color: rgb(35, 209, 102) !important;
-
+  border-radius: 0% !important;
   padding: 7px;
 }
 

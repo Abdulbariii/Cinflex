@@ -13,7 +13,7 @@ import "swiper/css/pagination";
 import Hr from "../lines/Hr";
 // import required modules
 import { Pagination } from "swiper";
-export default function Recommend({ genres }) {
+export default function Recommend({ genres, goToBack }) {
   let url = `https://movies-app1.p.rapidapi.com/api/movies?query=${""}&
     page=1&limit=8&year=${""}&genres=${genres}`;
 
@@ -58,6 +58,7 @@ export default function Recommend({ genres }) {
                     </h1>
 
                     <Link
+                      onClick={goToBack}
                       className={` flex justify-center transition-all items-center text-green-500 hover:text-green-500 hover:scale-110  shadow-sm text-7xl`}
                       to={`/movieDetail/${e._id}`}
                     >

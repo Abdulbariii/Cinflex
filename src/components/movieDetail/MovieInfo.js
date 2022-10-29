@@ -12,6 +12,7 @@ export default function MovieInfo({ data }) {
   console.log(data);
 
   const watchSection = useRef(null);
+  const backCover = useRef(null);
 
   const goToWatchSection = () => {
     window.scrollTo({
@@ -19,9 +20,18 @@ export default function MovieInfo({ data }) {
       behavior: "smooth",
     });
   };
+  const goToBack = () => {
+    window.scrollTo({
+      top: backCover.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="flex flex-col gap-28 py-10">
-      <div className="flex gap-36 items-center w-full h-full text-white ">
+      <div
+        ref={backCover}
+        className="flex gap-36 items-center w-full h-full text-white "
+      >
         <img
           className="h-[40rem] w-[32rem] object-cover  "
           src={
@@ -104,8 +114,11 @@ export default function MovieInfo({ data }) {
         )}
       </div>
 
-      <div ref={watchSection}>
-        <Recommend genres={data && data.result.genres[0].uuid}></Recommend>
+      <div>
+        <Recommend
+          goToBack={goToBack}
+          genres={data && data.result.genres[0].uuid}
+        ></Recommend>
       </div>
     </div>
   );
