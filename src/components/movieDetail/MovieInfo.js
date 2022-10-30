@@ -8,6 +8,7 @@ import { MdOutlineLocalMovies } from "react-icons/md";
 import { RiMovie2Line } from "react-icons/ri";
 import Vr from "../lines/Vr";
 import PlaySeries from "./PlaySeries";
+
 export default function MovieInfo({ data }) {
   console.log(data);
 
@@ -75,7 +76,7 @@ export default function MovieInfo({ data }) {
       </div>
 
       <div className="mt-20">
-        <div className="text-transparent leading-snug items-center font-Main  flex gap-14 text-2xl  text-white ">
+        <div className="text-transparent leading-snug items-center font-Main  flex gap-6 text-2xl  text-white ">
           <p className="">
             {" "}
             <span className="  text-4xl">Release</span> {data.result.release}
@@ -94,7 +95,7 @@ export default function MovieInfo({ data }) {
           </p>
         </div>
       </div>
-      <Vr></Vr>
+
       <div>
         <div className=" text-transparent items-center leading-snug font-Main  flex gap-5 text-2xl  text-white ">
           <h1 className="text-4xl font-medium "> Description </h1>

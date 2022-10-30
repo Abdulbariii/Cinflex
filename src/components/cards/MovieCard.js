@@ -26,15 +26,15 @@ export default function MovieCard(props) {
               <div
                 className={`absolute bottom-0 mt-5 card bg-slate-900 rounded-none font-cool    bg-opacity-90 flex transition-all justify-around items-center flex-col h-0    overflow-hidden w-full`}
               >
-                <h1 className="text-gray-50   text-2xl">
+                <h1 className="text-gray-50  font-Main  text-3xl">
                   {movie.title} , {movie.year}
                 </h1>
 
                 <Link
-                  className={` flex justify-center transition-all items-center text-green-500 hover:text-green-500 hover:scale-110  shadow-sm text-7xl`}
+                  className={` flex justify-center transition-all items-center text-green-500 hover:text-green-500 hover:scale-150  shadow-sm text-7xl`}
                   to={`/movieDetail/${movie._id}`}
                 >
-                  <AiOutlinePlayCircle></AiOutlinePlayCircle>
+                  <h1 className="text-green-500 font-Main text-6xl ">WATCH</h1>
                 </Link>
                 <Hr></Hr>
               </div>
