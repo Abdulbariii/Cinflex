@@ -9,7 +9,7 @@ export default function Footer() {
   ];
 
   return (
-    <div className="h-screen w-full flex items-center justify-between ">
+    <div className="h-screen w-full  flex items-center justify-between ">
       <h1 className="text-9xl font-Main text-white">CINFLEX</h1>
 
       <div className="flex flex-col gap-10">
