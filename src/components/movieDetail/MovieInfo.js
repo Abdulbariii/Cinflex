@@ -7,10 +7,13 @@ import Hr from "../lines/Hr";
 import { MdOutlineLocalMovies } from "react-icons/md";
 import { RiMovie2Line } from "react-icons/ri";
 import Vr from "../lines/Vr";
+import PlaySeries from "./PlaySeries";
+
 export default function MovieInfo({ data }) {
   console.log(data);
 
   const watchSection = useRef(null);
+  const backCover = useRef(null);
 
   const goToWatchSection = () => {
     window.scrollTo({
@@ -18,11 +21,20 @@ export default function MovieInfo({ data }) {
       behavior: "smooth",
     });
   };
+  const goToBack = () => {
+    window.scrollTo({
+      top: backCover.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="flex flex-col gap-28 py-10">
-      <div className="flex gap-36 items-start w-full h-full text-white ">
+      <div
+        ref={backCover}
+        className="flex gap-36 items-center w-full h-full text-white "
+      >
         <img
-          className="h-[35rem] w-[32rem] object-cover  "
+          className="h-[40rem] w-[32rem] object-cover  "
           src={
             data.result.image
               ? data.result.image.replace("w300", "w500")
@@ -64,7 +76,7 @@ export default function MovieInfo({ data }) {
       </div>
 
       <div className="mt-20">
-        <div className="text-transparent leading-snug items-center font-Main  flex gap-14 text-2xl  text-white ">
+        <div className="text-transparent leading-snug items-center font-Main  flex gap-6 text-2xl  text-white ">
           <p className="">
             {" "}
             <span className="  text-4xl">Release</span> {data.result.release}
@@ -83,7 +95,7 @@ export default function MovieInfo({ data }) {
           </p>
         </div>
       </div>
-      <Vr></Vr>
+
       <div>
         <div className=" text-transparent items-center leading-snug font-Main  flex gap-5 text-2xl  text-white ">
           <h1 className="text-4xl font-medium "> Description </h1>
@@ -96,12 +108,18 @@ export default function MovieInfo({ data }) {
       </div>
 
       <div ref={watchSection}>
-        <PlayMovies dataServer={data && data.result.embedUrls}></PlayMovies>
+        {data && data.result.embedUrls && data.result.embedUrls.length == 0 ? (
+          <PlaySeries></PlaySeries>
+        ) : (
+          <PlayMovies dataServer={data && data.result.embedUrls}></PlayMovies>
+        )}
       </div>
 
-      <Hr></Hr>
-      <div ref={watchSection}>
-        <Recommend genres={data && data.result.genres[0].uuid}></Recommend>
+      <div>
+        <Recommend
+          goToBack={goToBack}
+          genres={data && data.result.genres[0].uuid}
+        ></Recommend>
       </div>
     </div>
   );
