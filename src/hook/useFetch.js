@@ -36,3 +36,4 @@ export const useFetch = (url) => {
 
   return { data, isPending, error };
 };
+// skdfjal
