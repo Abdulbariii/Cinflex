@@ -42,7 +42,7 @@ export default function Recommend({ genres, goToBack }) {
           data.results.map((e) => (
             <SwiperSlide className="text-green-500">
               <div className="flex flex-col  items-start justify-start gap-3 mb-20 text-green-500">
-                <div className="card-con relative  ">
+                <div className="card-con relative  hover:scale-105 transition-all ">
                   <img
                     className="h-96 w-96 object-contain  "
                     src={

@@ -7,7 +7,7 @@ import { AiOutlinePlayCircle } from "react-icons/ai";
 export default function MovieCard(props) {
   const { color } = useTheme();
   return (
-    <div className="flex  flex-wrap  gap-3 ">
+    <div className="flex  flex-wrap  gap-3  ">
       {props.movies &&
         props.movies.results &&
         props.movies.results
@@ -15,7 +15,7 @@ export default function MovieCard(props) {
           .map((movie) => (
             <div
               key={movie._id}
-              className="w-72 mb-20 card-con  h-[30rem]  relative"
+              className="w-72 mb-20 card-con  h-[30rem] hover:scale-105 transition-all  relative"
             >
               <img
                 src={movie.image && movie.image.replace("w300", "w500")}
