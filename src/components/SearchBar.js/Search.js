@@ -26,22 +26,30 @@ export default function Search() {
   }, []);
 
   return (
-    <div className="flex items-center w-full">
-      <form className="flex text-white  font-Main  p-2 items-end justify-between gap-44 w-full ">
+    <div className="flex 
+  
+    
+    items-center w-full">
+      {/* era */}
+      <form className="flex lg:flex-row md:flex-row
+      flex-col
+      text-white  font-Main  lg:p-2 md:p-2 items-end justify-between lg:gap-44 md:gap-44 gap-12 w-full ">
         <label className="relative text-4xl ">
           {/* input */}
 
           <input
             onChange={(e) => getTitle(e.target.value)}
             placeholder="Search"
-            className={`w-96 border-2 border-white h-12    text-2xl   bg-black px-14   text-white `}
+            className={`lg:w-96  border-2 border-white h-12    text-2xl   bg-black lg:px-14 md:px-14 px-2    text-white `}
           />
-          <div className=" text-3xl absolute top-3 ml-2 left-2 ">
+          <div className=" text-3xl absolute top-3  ml-2 right-3 ">
             <AiOutlineSearch></AiOutlineSearch>
           </div>
         </label>
-        <div className="flex gap-20">
-          <label className="flex text-white flex-col gap-2   w-52 ">
+        {/* genere year */}
+        <div className="flex lg:flex-row md:flex-row
+      flex-col  self-center  lg:gap-20 md:gap-20 gap-10">
+          <label className="flex text-white flex-col gap-2   lg:w-52 md:w-52 ">
             <span className={`font-Main  text-lg`}>Geners</span>
 
             <select
