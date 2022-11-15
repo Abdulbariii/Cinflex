@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import useTheme from "../../hook/useTheme";
+
 import { NavLink } from "react-router-dom";
 export default function Navbar() {
   const navbars = [
@@ -23,8 +22,8 @@ export default function Navbar() {
   ];
 
   return (
-    <div className={""}>
-      <nav className="flex font-Main justify-around gap-5 m-3 md:m-0 text-lg text-white  flex-wrap transition-all duration-200 ">
+    <div className={"lg:self-start md:self-start self-center "}>
+      <nav className="flex  lg:flex-row md:flex-row flex-col   font-Main justify-around gap-8 md:gap-5 lg:gap-5 lg:m-3  md:m-0 lg:text-lg md:text-lg text-xl text-white  flex-wrap transition-all duration-200 ">
         {navbars.map((nav) => (
           <NavLink
             className={({ isActive }) =>
