@@ -36,19 +36,20 @@ export default function PlayMovies({ dataServer }) {
   const [serverUrl, setServerUrl] = useState(8);
 
   return (
-    <div className="mt-32">
+    <div className="lg:mt-32 md:mt-32 mt-14 ">
       <h1 className="text-4xl font-Main text-white  ">Watching</h1>
-      <div className=" flex gap-10 relative  mt-5  w-full justify-between items-start">
+      <div className=" flex  lg:flex-row md:flex-row flex-col md:gap-10 lg:gap-10 relative  md:mt-5 lg:mt-5   w-full justify-between items-start">
         <iframe
           src={
             dataServer && dataServer[serverUrl].url && dataServer[serverUrl].url
           }
-          className="h-[31rem] rounded-md w-[55rem] "
+          className="h-[31rem] rounded-md lg:w-[55rem] md:w-[55rem] w-full "
           title="Iframe Example"
         ></iframe>
 
         <div>
-          <ul className=" flex-col  text-transparent items-center leading-snug font-Main  flex gap-10 text-2xl  text-white    ">
+          {/* flex-row justify-center  flex-wrap */}
+          <ul className=" mt-14 md:mt-0 lg:mt-0 lg:flex-col md:flex-col  sm:flex-row justify-center flex-wrap  text-transparent items-center leading-snug font-Main  flex gap-8 text-2xl text-white    ">
             {servers.map((server) => (
               <div>
                 <li
