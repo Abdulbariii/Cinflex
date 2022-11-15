@@ -46,7 +46,7 @@ export default function MovieInfo({ data }) {
         <div className="flex  flex-col gap-10">
           {/* btn */}
 
-          <div>
+          <div className="">
             <h1 className="text-transparent leading-snug  font-Main md:text-6xl lg:text-9xl text-start text-7xl  bg-clip-text bg-gradient-to-r from-purple-100 to-white   ">
               {data.result.titleOriginal}{" "}
             </h1>
