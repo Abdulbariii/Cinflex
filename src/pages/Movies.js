@@ -1,7 +1,5 @@
 import React from "react";
-import Search from "../components/SearchBar.js/Search";
 import Cards from "../components/cards/Cards";
-import { useLocation } from "react-router-dom";
 import Dashboard from "../components/Navigation/Dashboard";
 export default function Movies() {
   return (
