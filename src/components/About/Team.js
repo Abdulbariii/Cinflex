@@ -19,7 +19,7 @@ export default function Team() {
             md:w-40
             md:h-40
             w-[12rem]
-            h-[7rem]
+            h-[8rem]
             
             
             border-green-500 border-2 object-cover lg:h-40 rounded-full"
@@ -46,7 +46,7 @@ export default function Team() {
             md:w-40
             md:h-40
             w-[12rem]
-            h-[7rem] border-green-500 border-2 object-cover h-40 rounded-full
+            h-[8rem] border-green-500 border-2 object-cover h-40 rounded-full
             "
           />{" "}
           <div>
