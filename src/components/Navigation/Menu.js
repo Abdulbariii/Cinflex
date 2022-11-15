@@ -8,9 +8,9 @@ export default function Menu() {
     <div>
       <button
         onClick={() => {
-          openNavbar(openMenu ? false : true);
+          openNavbar(!openMenu);
         }}
-        className="text-4xl transition-all duration-200 text-white md:hidden"
+        className="lg:text-4xl md:text-4xl text-3xl lg:mt-0 md:mt-0 mt-2  transition-all duration-200 text-white md:hidden"
       >
         {openMenu ? (
           <AiOutlineClose></AiOutlineClose>

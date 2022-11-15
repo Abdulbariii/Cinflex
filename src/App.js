@@ -5,8 +5,6 @@ import Home from "./pages/Home";
 import Movies from "./pages/Movies";
 import MovieDetail from "./pages/MovieDetail";
 import Navigation from "./components/Navigation/Navigation";
-import ThemeSelector from "./components/themes/ThemeSelector";
-import useTheme from "./hook/useTheme";
 import Trailar from "./pages/Trailar";
 import SignUp from "./pages/form/SignUp";
 import { useLocation } from "react-router-dom";

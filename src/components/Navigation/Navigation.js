@@ -7,8 +7,8 @@ export default function Navigation() {
   const { color, openMenu } = useTheme();
   return (
     <div
-      className={`flex flex-col md:flex-row  bg-transparent justify-between   origin-bottom-right   transition-all duration-200   overflow-hidden ${
-        openMenu ? "h-40" : "h-16"
+      className={`flex flex-col  md:flex-row  bg-transparent justify-between   origin-bottom-right   transition-all duration-200   overflow-hidden ${
+        openMenu ? "lg:h-40 md:h-40 h-72" : "lg:h-16 md:h-16 h-10 "
       } w-full items-start  md:items-center `}
     >
       <div className="md:flex hidden">
@@ -19,7 +19,7 @@ export default function Navigation() {
         <Menu></Menu>
       </div>
 
-      <Navbar></Navbar>
+      <Navbar ></Navbar>
     </div>
   );
 }
