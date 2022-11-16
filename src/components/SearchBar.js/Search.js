@@ -40,7 +40,7 @@ export default function Search() {
       {/* era */}
       <form className="flex lg:flex-row md:flex-row
       flex-col
-      text-white  font-Main  lg:p-2 md:p-2 items-end justify-between lg:gap-44 md:gap-44 gap-12 w-full ">
+      text-white  font-Main  lg:p-2 md:p-2 items-end justify-between lg:gap-44 md:gap-10 gap-12 w-full ">
         <label className="relative text-4xl ">
           {/* input */}
 
@@ -55,15 +55,15 @@ export default function Search() {
         </label>
         {/* genere year */}
         <div className="flex lg:flex-row md:flex-row
-      flex-col  self-center  lg:gap-20 md:gap-20 gap-10">
-          <label className="flex text-white flex-col gap-2   lg:w-52 md:w-52 ">
+      flex-col  self-center  lg:gap-20 md:gap-8 gap-10">
+          <label className="flex text-white flex-col gap-2   lg:w-52 md:w-18 ">
             <span className={`font-Main  text-lg`}>Geners</span>
 
             <select
               onChange={(e) => {
                 getGeners(e.target.value.toLowerCase());
               }}
-              className={`bg-black w-60 h-12 border-2 border-white text-2xl`}
+              className={`bg-black md:w-40 lg:w-60 h-12 border-2 border-white text-2xl`}
             >
               {data &&
                 data.results.map((genere) => {
@@ -81,12 +81,12 @@ export default function Search() {
             </select>
           </label>
 
-          <label className="flex text-white flex-col gap-2   w-52 ">
+          <label className="flex text-white flex-col gap-2  md:w-12 lg:w-52 ">
             <span className={` font-Main  text-lg`}>Year</span>
             <select
               // value={years}
               onChange={(e) => getYear(e.target.value)}
-              className={`bg-black w-60 h-12 border-2 border-white text-2xl`}
+              className={`bg-black md:w-40 lg:w-60 h-12 border-2 border-white text-2xl`}
             >
               {years &&
                 years.results.map((year) => (
