@@ -1,7 +1,10 @@
 import React from "react";
 
 import { NavLink } from "react-router-dom";
+import useTheme from "../../hook/useTheme";
 export default function Navbar() {
+  const { openNavbar, openMenu } = useTheme();
+
   const navbars = [
     {
       navName: "Home",
@@ -31,6 +34,7 @@ export default function Navbar() {
                 ? ` underline  underline-offset-4 decoration-green-500 `
                 : ` `
             }
+            onClick={()=>{openNavbar(!openMenu)}}
             to={nav.navLink}
             key={nav.navLink}
           >
