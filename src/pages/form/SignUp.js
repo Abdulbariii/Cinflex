@@ -44,11 +44,11 @@ const SignUp = () => {
 
   return (
     <div className="">
-      <div className="  flex py-[5%] px-[10%]">
+      <div className="  lg:flex-row md:flex-row flex-col flex py-[5%] px-[10%]">
         {/* left */}
         <div
-          className="bg-[black] w-full
-              rounded-l-md"
+          className="bg-[white] w-full
+              lg:rounded-l-md md:rounded-l-md"
         >
           fldfskj
         </div>
