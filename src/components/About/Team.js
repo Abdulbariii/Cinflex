@@ -10,16 +10,18 @@ export default function Team() {
         Team
       </h1>
 
-      <div className="flex justify-between w-full gap-20">
-        <div className="flex flex-col text-slate-50 text-2xl justify-center items-center gap-3">
+      <div className="flex  lg:flex-row md:flex-row  flex-col  justify-between w-full gap-20">
+
+
+        <div className="flex flex-col text-slate-50  text-2xl  justify-center items-center gap-3">
           <img
           alt=""
             src={Yaqub}
             className="lg:w-40 
             md:w-40
             md:h-40
-            w-[12rem]
-            h-[8rem]
+            w-[14rem]
+            h-[14rem]
             
             
             border-green-500 border-2 object-cover lg:h-40 rounded-full"
@@ -37,7 +39,8 @@ export default function Team() {
             </a>
           </div>
         </div>
-        <div className="flex text-slate-50 text-2xl flex-col object-cover justify-center items-center gap-3">
+        <div className="flex text-slate-50 text-2xl
+        flex-col object-cover justify-center  items-center gap-3">
           <img
             src={Abdulbari}
             className="
@@ -45,8 +48,8 @@ export default function Team() {
             lg:h-40
             md:w-40
             md:h-40
-            w-[12rem]
-            h-[8rem] border-green-500 border-2 object-cover h-40 rounded-full
+            w-[14rem]
+            h-[14rem] border-green-500 border-2 object-cover rounded-full
             "
           />{" "}
           <div>
