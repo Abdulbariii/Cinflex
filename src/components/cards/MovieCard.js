@@ -5,7 +5,7 @@ import Hr from "../lines/Hr";
 export default function MovieCard(props) {
   return (
     // flex  flex-wrap  gap-3
-    // 
+    //
     <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-x3 lg:gap-x-3 gap-x-16 place-items-center  ">
       {props.movies &&
         props.movies.results &&
@@ -14,7 +14,7 @@ export default function MovieCard(props) {
           .map((movie) => (
             <div
               key={movie._id}
-              className="lg:w-72 md:w-72 w-44  mb-20 card-con  h-[30rem]  relative"
+              className="lg:w-72 md:w-72 w-44 md:h-[30rem]  mb-20 card-con  h-80  relative"
             >
               <img
                 src={movie.image && movie.image.replace("w300", "w500")}

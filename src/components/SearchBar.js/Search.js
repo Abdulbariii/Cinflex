@@ -18,11 +18,11 @@ export default function Search() {
   //   },
   // };
   const options = {
-    method: 'GET',
+    method: "GET",
     headers: {
-      'X-RapidAPI-Key': 'fef00c737fmsh403e2e73d3900e5p192246jsn1a66c97dd694',
-      'X-RapidAPI-Host': 'movies-app1.p.rapidapi.com'
-    }
+      "X-RapidAPI-Key": "fef00c737fmsh403e2e73d3900e5p192246jsn1a66c97dd694",
+      "X-RapidAPI-Host": "movies-app1.p.rapidapi.com",
+    },
   };
 
   useEffect(() => {
@@ -33,14 +33,13 @@ export default function Search() {
   }, []);
 
   return (
-    <div className="flex 
-  
-    
-    items-center w-full">
+    <div className="flex flex-wrap items-center w-full">
       {/* era */}
-      <form className="flex lg:flex-row md:flex-row
+      <form
+        className="flex lg:flex-row md:flex-row
       flex-col
-      text-white  font-Main  lg:p-2 md:p-2 items-end justify-between lg:gap-44 md:gap-10 gap-12 w-full ">
+      text-white  font-Main  lg:p-2 md:p-2 items-end justify-between lg:gap-44 md:gap-10 gap-12 w-full "
+      >
         <label className="relative text-4xl ">
           {/* input */}
 
@@ -54,8 +53,10 @@ export default function Search() {
           </div>
         </label>
         {/* genere year */}
-        <div className="flex lg:flex-row md:flex-row
-      flex-col  self-center  lg:gap-20 md:gap-8 gap-10">
+        <div
+          className="flex flex-wrap lg:flex-row md:flex-row
+      flex-col  self-center  lg:gap-20 md:gap-8 gap-10"
+        >
           <label className="flex text-white flex-col gap-2   lg:w-52 md:w-18 ">
             <span className={`font-Main  text-lg`}>Geners</span>
 

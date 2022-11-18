@@ -54,23 +54,25 @@ export default function Recommend({ genres, goToBack }) {
                   <div
                     className={`absolute bottom-0 mt-5 card bg-slate-900 rounded-none font-cool    bg-opacity-90 flex transition-all justify-around items-center flex-col h-0    overflow-hidden w-full`}
                   >
-                    <h1 className="text-gray-50   text-2xl">
+                    <h1 className="text-gray-50  md:text-2xl  text-sm">
                       {e.title} , {e.year}
                     </h1>
 
                     <Link
                       onClick={goToBack}
-                      className={` flex justify-center transition-all items-center text-green-500 hover:text-green-500 hover:scale-110  shadow-sm text-7xl`}
+                      className={` flex justify-center transition-all items-center text-green-500 hover:text-green-500 hover:scale-110 md:text-7xl  shadow-sm text-sm`}
                       to={`/movieDetail/${e._id}`}
                     >
-                      <h1 className="text-green-500 font-Main text-4xl ">
+                      <h1 className="text-green-500 font-Main md:text-4xl text-sm  ">
                         WATCH
                       </h1>
                     </Link>
                     <Hr></Hr>
                   </div>
                 </div>
-                <h1 className="text-gray-50 font-Main   text-xl">{e.title}</h1>
+                <h1 className="text-gray-50 font-Main  md:text-xl text-[10px]">
+                  {e.title}
+                </h1>
               </div>
 
               <Hr></Hr>
