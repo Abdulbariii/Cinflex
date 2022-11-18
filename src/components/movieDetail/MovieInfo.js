@@ -9,6 +9,9 @@ import PlaySeries from "./PlaySeries";
 
 export default function MovieInfo({ data }) {
 
+console.log(data);
+
+
   const watchSection = useRef(null);
   const backCover = useRef(null);
 
@@ -112,8 +115,8 @@ export default function MovieInfo({ data }) {
       </div>
 
       <div ref={watchSection}>
-        {data && data.result.embedUrls && data.result.embedUrls.length == 0 ? (
-          <PlaySeries></PlaySeries>
+        {data && data.result.embedUrls && data.result.embedUrls.length === 0 ? (
+          <PlaySeries dataSeries={data && data.result}></PlaySeries>
         ) : (
           <PlayMovies dataServer={data && data.result.embedUrls}></PlayMovies>
         )}
