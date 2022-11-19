@@ -28,7 +28,8 @@ const themeReducer = (state, action) => {
 //
 export function ContextTheme(props) {
   const [state, distpatch] = useReducer(themeReducer, {
-    color: "bg-sky-500",
+    color: "bg-green-500",
+   
 
     mode: "bg-gray-900",
 

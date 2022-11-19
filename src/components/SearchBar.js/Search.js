@@ -18,13 +18,12 @@ export default function Search() {
   //   },
   // };
   const options = {
-    method: "GET",
+    method: 'GET',
     headers: {
-      "X-RapidAPI-Key": "fef00c737fmsh403e2e73d3900e5p192246jsn1a66c97dd694",
-      "X-RapidAPI-Host": "movies-app1.p.rapidapi.com",
-    },
+      'X-RapidAPI-Key': 'bebf8be787mshb2b4237a28f4e93p1ea88fjsn121587fcbbd8',
+      'X-RapidAPI-Host': 'movies-app1.p.rapidapi.com'
+    }
   };
-
   useEffect(() => {
     fetch("https://movies-app1.p.rapidapi.com/api/years", options)
       .then((response) => response.json())

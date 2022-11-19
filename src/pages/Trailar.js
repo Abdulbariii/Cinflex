@@ -17,7 +17,13 @@ const Trailar = () => {
 
 
     <div className='
-    absolute overflow-y-hidden top-[5rem] backdrop-blur-md  h-[100vh] w-[98vw] flex justify-center  mt-1'>
+    lg:top-0 
+    md:top-0
+    top-0
+
+    
+    left-0
+    absolute overflow-y-hidden  backdrop-blur-md  h-full w-full flex justify-center  '>
 
 <motion.button
  whileHover={{ scale: 1.2, rotate: 90}}
@@ -35,7 +41,10 @@ className={`right-10 top-5  absolute`} onClick={()=>{Navigate(`/movieDetail/${id
 {error&&<h1 className='text-white text-[3rem]'>{error}</h1>}
 
         {
-            data&& <div className='hh z-50 mt-[10%] '>
+            data&& <div className='hh
+            lg:mt-[10%]
+            md:mt-[20%]
+            z-50 mt-[40%] '>
 
 <motion.embed   initial={{ scale: 0 }}
   animate={{ rotate: 360, scale: 1 }}
@@ -49,7 +58,7 @@ className={`right-10 top-5  absolute`} onClick={()=>{Navigate(`/movieDetail/${id
 
 
   
-  type="video/webm" src={data.result[0].embed} className={'w-[500px] h-[400px]'}/>
+  type="video/webm" src={data.result[0].embed} className={'lg:w-[500px] lg:h-[400px] md:w-[600px] md:h-[600px]  w-[350px] h-[450px]'}/>
             </div>
         }
       

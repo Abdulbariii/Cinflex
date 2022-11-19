@@ -32,7 +32,7 @@ console.log(data);
       {/* buton && image */}
       <div
         ref={backCover}
-        className="flex lg:flex-row md:flex-row flex-col lg:gap-36 md:gap-36 gap-7 items-center w-full h-full text-white "
+        className="flex lg:flex-row md:flex-col flex-col lg:gap-36 md:gap-36 gap-7 items-center w-full h-full text-white "
       >
         <img
           className="lg:h-[40rem] md:h-[40rem] lg:w-[32rem] md:w-[32rem] w-[18rem] object-cover  "
