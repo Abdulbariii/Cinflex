@@ -19,6 +19,8 @@ const themeReducer = (state, action) => {
       return { ...state, openMenu: action.payload };
       case 'GET_SEASON':
         return{...state,season:action.payload};
+      case 'GET_CSEASON':
+        return{...state,cseason:action.payload};
     default:
       return state;
   }
@@ -39,7 +41,8 @@ export function ContextTheme(props) {
     page: "6",
 
     openMenu: false,
-    season:'0'
+    season:'0',
+    cseason:'1'
   });
 
   //
@@ -75,6 +78,10 @@ export function ContextTheme(props) {
   const maxSeason=(season)=>{
     distpatch({type:'GET_SEASON',payload:season});
   }
+  //
+  const currentSeason=(cseason)=>{
+    distpatch({type:'GET_CSEASON',payload:cseason});
+  }
 
   return (
     <themeContext.Provider
@@ -87,7 +94,8 @@ export function ContextTheme(props) {
         getGeners,
         getTitle,
         getPage,
-        maxSeason
+        maxSeason,
+        currentSeason
       }}
     >
       {props.children}
