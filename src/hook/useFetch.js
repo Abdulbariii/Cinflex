@@ -5,13 +5,7 @@ export const useFetch = (url) => {
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState(null);
 
-  // const options = {
-  //   method: "GET",
-  //   headers: {
-  //     "X-RapidAPI-Key": "0e1aa90e06mshe6e538a59c86545p1acc12jsnde0b1704f0de",
-  //     "X-RapidAPI-Host": "movies-app1.p.rapidapi.com",
-  //   },
-  // };
+
   const options = {
     method: 'GET',
     headers: {
@@ -44,4 +38,3 @@ export const useFetch = (url) => {
 
   return { data, isPending, error };
 };
-// skdfjal

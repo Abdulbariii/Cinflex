@@ -2,9 +2,10 @@ import React from 'react'
 import useTheme from '../../hook/useTheme';
 
 const Episode = ({dataSeries}) => {
+
+
 //current season
     const { cseason } = useTheme();
-
 
     //2.return epsode's current season
     const getEpisode=(ep)=>{

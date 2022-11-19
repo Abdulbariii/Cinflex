@@ -10,13 +10,6 @@ export default function Search() {
   const [years, setYears] = useState();
 
   // create link
-  // const options = {
-  //   method: "GET",
-  //   headers: {
-  //     "X-RapidAPI-Key": "0e1aa90e06mshe6e538a59c86545p1acc12jsnde0b1704f0de",
-  //     "X-RapidAPI-Host": "movies-app1.p.rapidapi.com",
-  //   },
-  // };
   const options = {
     method: 'GET',
     headers: {
@@ -101,27 +94,3 @@ export default function Search() {
     </div>
   );
 }
-
-/**   <select
-              onChange={(e) => {
-                getGeners(e.target.value.toLowerCase());
-              }}
-              className={`h-8 p-1 flex justify-center items-center rounded-sm  shadow-lg  shadow-[#0000003a]  text-black  ${
-                mode === "bg-gray-50"
-                  ? "bg-gray-50 text-gray-900"
-                  : "bg-gray-900 text-gray-50"
-              }`}
-            >
-              {data &&
-                data.results.map((genere) => {
-                  return (
-                    <option
-                      key={genere.name && genere.name}
-                      value={genere.name && genere.name}
-                    >
-                      {" "}
-                      {genere.name7 && genere.name}
-                    </option>
-                  );
-                })}
-            </select>**/
