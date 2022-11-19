@@ -2,17 +2,30 @@ import React from 'react'
 import useTheme from '../../hook/useTheme';
 
 const Episode = ({dataSeries}) => {
+  console.log(dataSeries);
 
 
 //current season
     const { cseason } = useTheme();
+//to sort episodes
+var eps=[];
+
+
+
 
     //2.return epsode's current season
+
+
+
+
     const getEpisode=(ep)=>{
-        if(ep.season==cseason){return ep.episode
-        }else{return null}
+        if(ep.season==cseason){
+          return ep.episode
+         }else{return null}
     
     }
+   
+
 
 
   return (
@@ -24,7 +37,7 @@ const Episode = ({dataSeries}) => {
             getEpisode(ep)&&(<p className=' 
             text-[#ffff] 
             hover:text-green-500
-            hover:cursor-pointer'>Episode: {(getEpisode(ep)) }</p>)
+            hover:cursor-pointer'>Episode: <span>{eps.push(getEpisode(ep))}</span>  </p>)
          )) }
     </div>
   )
