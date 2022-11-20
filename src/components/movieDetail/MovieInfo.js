@@ -46,7 +46,7 @@ export default function MovieInfo({ data }) {
           {/* btn */}
 
           <div className="">
-            <h1 className="text-transparent leading-snug  font-Main md:text-6xl lg:text-9xl text-center text-7xl  bg-clip-text bg-gradient-to-r from-purple-100 to-white   ">
+            <h1 className="text-transparent leading-snug lg:text-start md:text-start  text-center  font-Main md:text-6xl lg:text-9xl text-7xl  bg-clip-text bg-gradient-to-r from-purple-100 to-white   ">
               {data.result.titleOriginal}{" "}
             </h1>
           </div>
