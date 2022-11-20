@@ -8,9 +8,7 @@ import { MdOutlineLocalMovies } from "react-icons/md";
 import PlaySeries from "./PlaySeries";
 
 export default function MovieInfo({ data }) {
-
-console.log(data);
-
+  console.log(data);
 
   const watchSection = useRef(null);
   const backCover = useRef(null);
@@ -32,7 +30,7 @@ console.log(data);
       {/* buton && image */}
       <div
         ref={backCover}
-        className="flex lg:flex-row md:flex-col flex-col lg:gap-36 md:gap-36 gap-7 items-center w-full h-full text-white "
+        className="flex lg:flex-row md:flex-col flex-col lg:gap-36 md:gap-36 gap-7 items-center md:items-start w-full h-full text-white "
       >
         <img
           className="lg:h-[40rem] md:h-[40rem] lg:w-[32rem] md:w-[32rem] w-[18rem] object-cover  "
@@ -48,12 +46,12 @@ console.log(data);
           {/* btn */}
 
           <div className="">
-            <h1 className="text-transparent leading-snug  font-Main md:text-6xl lg:text-9xl text-start text-7xl  bg-clip-text bg-gradient-to-r from-purple-100 to-white   ">
+            <h1 className="text-transparent leading-snug  font-Main md:text-6xl lg:text-9xl text-center text-7xl  bg-clip-text bg-gradient-to-r from-purple-100 to-white   ">
               {data.result.titleOriginal}{" "}
             </h1>
           </div>
 
-          <div className="flex flex-col justify-center items-center gap-5 my-2 ">
+          <div className="flex flex-col justify-start items-center md:items-start gap-5 my-2 ">
             <button
               onClick={goToWatchSection}
               href="watch-stream"
@@ -106,7 +104,7 @@ console.log(data);
         {/* description */}
         <div className="lg:mt-0 md:mt-0 mt-14 text-transparent items-center leading-snug font-Main  flex  gap-5 text-2xl  text-white lg:flex-row md:flex-row flex-col ">
           <h1 className="text-4xl font-medium "> Description </h1>
-          <Hr ></Hr>
+          <Hr></Hr>
           <p className="font-cool text-2xl  ">
             {" "}
             {CutText(data.result.description, 300)}

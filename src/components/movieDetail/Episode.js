@@ -1,46 +1,48 @@
-import React from 'react'
-import useTheme from '../../hook/useTheme';
+import React from "react";
+import useTheme from "../../hook/useTheme";
 
-const Episode = ({dataSeries}) => {
+const Episode = ({ dataSeries }) => {
   console.log(dataSeries);
 
+  //current season
+  const { cseason } = useTheme();
+  //to sort episodes
+  var eps = [];
 
-//current season
-    const { cseason } = useTheme();
-//to sort episodes
-var eps=[];
-
-
-
-
-    //2.return epsode's current season
-
-
-
-
-    const getEpisode=(ep)=>{
-        if(ep.season==cseason){
-          return ep.episode
-         }else{return null}
-    
+  //2.return epsode's current season
+  const getEpisode = (ep) => {
+    if (ep.season == cseason) {
+      return ep.episode;
+    } else {
+      return null;
     }
-   
-
-
+  };
 
   return (
-    <div className='
+    <div
+      className="
     my-8
-    grid gap-x-10 font-Main grid-cols-6  gap-y-12 '>
-        {/* 1.gives one episode to the function */}
-         {dataSeries.episodes.map(ep=>(
-            getEpisode(ep)&&(<p className=' 
+    grid gap-x-10 font-Main grid-cols-6  gap-y-12 "
+    >
+      {/* 1.gives one episode to the function */}
+      {dataSeries.episodes.map(
+        (ep) =>
+          getEpisode(ep) && (
+            <p
+              onClick={() => {
+                console.log(ep._id);
+              }}
+              className=" 
             text-[#ffff] 
             hover:text-green-500
-            hover:cursor-pointer'>Episode: <span>{eps.push(getEpisode(ep))}</span>  </p>)
-         )) }
+            hover:cursor-pointer"
+            >
+              Episode: <span>{eps.push(getEpisode(ep))}</span>{" "}
+            </p>
+          )
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Episode
+export default Episode;
