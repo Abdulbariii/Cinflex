@@ -4,7 +4,7 @@ import useTheme from "../../hook/useTheme";
 
 import { AiOutlineSearch } from "react-icons/ai";
 export default function Search() {
-  const { mode, getYear, getGeners, getTitle } = useTheme();
+  const {getYear, getGeners, getTitle } = useTheme();
   const url = `https://movies-app1.p.rapidapi.com/api/genres`;
   const { data } = useFetch(url);
   const [years, setYears] = useState();
