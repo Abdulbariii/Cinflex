@@ -38,7 +38,7 @@ export default function Search() {
           <input
             onChange={(e) => getTitle(e.target.value)}
             placeholder="Search"
-            className={`lg:w-96  border-2 border-white h-12    text-2xl   bg-black lg:px-14 md:px-14 px-2    text-white `}
+            className={`lg:w-96  border-2 border-white h-12    text-2xl   bg-black lg:px-14 md:px-14 px-2 w-fit   text-white `}
           />
           <div className=" text-3xl absolute top-3  ml-2 right-3 ">
             <AiOutlineSearch></AiOutlineSearch>
@@ -47,9 +47,9 @@ export default function Search() {
         {/* genere year */}
         <div
           className="flex flex-wrap lg:flex-row md:flex-row
-      flex-col  self-center  lg:gap-20 md:gap-8 gap-10"
+      flex-row  self-center  lg:gap-20 md:gap-8 gap-10"
         >
-          <label className="flex text-white flex-col gap-2   lg:w-52 md:w-18 ">
+          <label className="flex text-white flex-col gap-2 w-[8rem]  lg:w-52 md:w-18 ">
             <span className={`font-Main  text-lg`}>Geners</span>
 
             <select
