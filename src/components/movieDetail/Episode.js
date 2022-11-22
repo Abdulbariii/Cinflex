@@ -9,14 +9,7 @@ const Episode = ({dataSeries}) => {
     const { cseason } = useTheme();
 //to sort episodes
 var eps=[];
-
-
-
-
     //2.return epsode's current season
-
-
-
 
     const getEpisode=(ep)=>{
         if(ep.season==cseason){

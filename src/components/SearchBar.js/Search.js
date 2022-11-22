@@ -13,7 +13,7 @@ export default function Search() {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': 'bebf8be787mshb2b4237a28f4e93p1ea88fjsn121587fcbbd8',
+      'X-RapidAPI-Key': 'f6bafe28f6mshf70719373781ec6p1fec85jsn2d462831e2a7',
       'X-RapidAPI-Host': 'movies-app1.p.rapidapi.com'
     }
   };

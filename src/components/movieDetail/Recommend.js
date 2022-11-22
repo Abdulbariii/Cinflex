@@ -18,7 +18,7 @@ export default function Recommend({ genres, goToBack }) {
   let url = `https://movies-app1.p.rapidapi.com/api/movies?query=${""}&
     page=1&limit=8&year=${""}&genres=${genres}`;
 
-  const { data, isPending, error } = useFetch(url);
+  const { data } = useFetch(url);
   const [slideOne, setSlideOne] = useState([]);
 
   useEffect(() => {

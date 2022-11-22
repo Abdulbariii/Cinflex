@@ -2,11 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Animation.css";
 import Hr from "../lines/Hr";
+import useTheme from "../../hook/useTheme";
 export default function MovieCard(props) {
+
+  const {maxSeason,currentSeason} = useTheme();
+
   return (
-    // flex  flex-wrap  gap-3
-    //
-    <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-x3 lg:gap-x-3 gap-x-16 place-items-center  ">
+    <div  
+    className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-x3 lg:gap-x-3 gap-x-16 place-items-center  ">
       {props.movies &&
         props.movies.results &&
         props.movies.results
@@ -30,10 +33,18 @@ export default function MovieCard(props) {
                 </h1>
 
                 <Link
+
                   className={` flex justify-center transition-all items-center text-green-500 hover:text-green-500 hover:scale-150  shadow-sm text-7xl`}
                   to={`/movieDetail/${movie._id}`}
                 >
-                  <h1 className="text-green-500 font-Main md:text-6xl text-4xl lg:text-6xl ">
+                  <h1
+
+                  //when we click on a movie at the first the maxSeason and current season back to initial value
+                      onClick={()=>{maxSeason(0) 
+                        currentSeason(1)}}
+
+                  
+                  className="text-green-500 font-Main md:text-6xl text-4xl lg:text-6xl ">
                     WATCH
                   </h1>
                 </Link>
