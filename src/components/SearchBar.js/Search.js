@@ -29,7 +29,7 @@ export default function Search() {
       {/* era */}
       <form
         className="flex lg:flex-row md:flex-row
-      flex-col
+      flex-col 
       text-white  font-Main  lg:p-2 md:p-2 items-end justify-between lg:gap-44 md:gap-10 gap-12 w-full "
       >
         <label className="relative text-4xl ">
@@ -38,7 +38,7 @@ export default function Search() {
           <input
             onChange={(e) => getTitle(e.target.value)}
             placeholder="Search"
-            className={`lg:w-96  border-2 border-white h-12    text-2xl   bg-black lg:px-14 md:px-14 px-2 w-fit   text-white `}
+            className={`lg:w-96  border-2 border-white h-12    text-2xl   bg-black lg:px-14 md:px-14 px-2 w-[18rem]   text-white `}
           />
           <div className=" text-3xl absolute top-3  ml-2 right-3 ">
             <AiOutlineSearch></AiOutlineSearch>
