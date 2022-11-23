@@ -5,12 +5,12 @@ import Abdulbari from "../../img/Abdulbari Qaisar_Iraq_2022.jpg";
 import { AiOutlineGithub } from "react-icons/ai";
 export default function Team() {
   return (
-    <div className="flex flex-col gap-10 ">
-      <h1 className="text-transparent leading-snug  font-Main md:text-6xl lg:text-9xl text-start text-7xl  bg-clip-text bg-gradient-to-r from-purple-100 to-white ">
+    <div className="flex flex-col  gap-10 ">
+      <h1 className="text-transparent leading-snug  font-Main md:text-6xl lg:text-9xl text-start text-7xl  bg-clip-text bg-gradient-to-r from-purple-100 to-white lg:mb-0 md:mb-0 mb-4 ">
         Team
       </h1>
 
-      <div className="flex  lg:flex-row md:flex-row  flex-col  justify-between w-full gap-20">
+      <div className="flex   lg:flex-row md:flex-row  flex-col  justify-between  w-full gap-20">
 
 
         <div className="flex flex-col text-slate-50  text-2xl  justify-center items-center gap-3">
