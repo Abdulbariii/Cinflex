@@ -24,10 +24,11 @@ var eps=[];
   return (
     <div className='
     my-8
-    grid gap-x-10 font-Main grid-cols-6  gap-y-12 '>
+    grid md:gap-x-10 gap-x-4 lg:gap-x-10 font-Main lg:grid-cols-6 md:grid-cols-5 grid-cols-3 gap-y-12 '>
         {/* 1.gives one episode to the function */}
          {dataSeries.episodes.map(ep=>(
             getEpisode(ep)&&(<p className=' 
+            text-sm
             text-[#ffff] 
             hover:text-green-500
             hover:cursor-pointer'>Episode: <span>{eps.push(getEpisode(ep))}</span>  </p>)

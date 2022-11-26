@@ -48,7 +48,7 @@ console.log(data);
           {/* btn */}
 
           <div className="">
-            <h1 className="text-transparent leading-snug  font-Main md:text-6xl lg:text-9xl text-start text-7xl  bg-clip-text bg-gradient-to-r from-purple-100 to-white   ">
+            <h1 className="text-transparent leading-snug  font-Main md:text-6xl lg:text-9xl lg:text-start md:text-start text-center text-5xl   bg-clip-text bg-gradient-to-r from-purple-100 to-white   ">
               {data.result.titleOriginal}{" "}
             </h1>
           </div>
@@ -104,7 +104,7 @@ console.log(data);
 
       <div>
         {/* description */}
-        <div className="lg:mt-0 md:mt-0 mt-14 text-transparent items-center leading-snug font-Main  flex  gap-5 text-2xl  text-white lg:flex-row md:flex-row flex-col ">
+        <div className="lg:mt-0 md:mt-0 mt-14 text-transparent items-center lg:text-start md:text-start text-justify  leading-snug font-Main  flex  gap-5 text-2xl  text-white lg:flex-row md:flex-row flex-col ">
           <h1 className="text-4xl font-medium "> Description </h1>
           <Hr ></Hr>
           <p className="font-cool text-2xl  ">

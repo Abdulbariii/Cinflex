@@ -21,11 +21,14 @@ const Seasons = ({dataSeries}) => {
 
 
   return (
-    <div className='m-5 flex flex-col bg-[#30a46e69] p-5 shadow-lg '>
+    <div className='lg:m-5 md:m-5 mt-5  lg:mt-0 md:mt-0
+      flex flex-col bg-[#30a46e69] lg:items-start md:items-start items-center
+        md:p-5 lg:p-5 p-3 shadow-lg
+       pt-5 lg:pt-0 md:pt-0 '>
 
 
        {/*number of season  */}
-      <select className='  w-[8rem] ' name="seasons" id="" onChange={(e)=>currentSeason(e.target.value)}>
+      <select className='  w-[8rem] mb-3' name="seasons" id="" onChange={(e)=>currentSeason(e.target.value)}>
         seasons
       {dataSeries.episodes.map(num=>(find_max_season(num.season)))}
       {one(season)}
