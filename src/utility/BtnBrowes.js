@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import useTheme from "../../hook/useTheme";
 import { BsArrowRight } from "react-icons/bs";
 export default function BtnBrowes() {
   return (
@@ -12,7 +11,7 @@ export default function BtnBrowes() {
       >
         Browes Movies
         <div className="ml-10 transition-all   text-3xl ">
-          <BsArrowRight></BsArrowRight>
+          <BsArrowRight/>
         </div>
       </Link>
     </div>
