@@ -6,14 +6,16 @@ import NewPagnation from "../pagnation/NewPagnation";
 import { ThreeCircles } from "react-loader-spinner";
 export default function Cards() {
   const { year, gener, title } = useTheme();
-  console.log(gener);
+ 
 
   //linki 3am
   let url = `https://movies-app1.p.rapidapi.com/api/movies?query=${title}&
   page=4&limit=23&year=${year}&genres=${gener}`;
 
   const { data, isPending, error } = useFetch(url);
-  console.log(data && data);
+
+  console.log(data);
+
   const [pageNumber, setPageNumber] = useState(0);
   const userPerPage = 8;
   const pagesVisited = pageNumber * userPerPage;
@@ -23,7 +25,9 @@ export default function Cards() {
     setPageNumber(selected);
   };
   return (
-    <div className="flex flex-col relative mt-2 justify-between items-start h-full w-full ">
+    <div className="flex flex-col text-center  relative
+    
+    mt-2 justify-between  md:items-start items-center lg:items-start  h-full w-full ">
       {isPending && (
         <ThreeCircles
           height="100"
@@ -48,13 +52,25 @@ export default function Cards() {
           ></MovieCard>
         </div>
       )}
+      {
+        data && (
+          !data.total_pages && <h1 className="text-white lg:text-5xl md:text-4xl font-Main text-4xl ">No movie was found !</h1>
+        )
+      }
 
       {/* creating pagnation */}
-      {!isPending && (
-        <div className="">
-          <NewPagnation pageCount={pageCount} changePage={changePage} />
-        </div>
-      )}
+      {/* {!isPending && (
+    <div className="">
+<NewPagnation pageCount={pageCount} changePage={changePage} />
+</div>)
+      } */}
+      {
+
+        data &&
+     (data.total_pages && ( <NewPagnation pageCount={pageCount} changePage={changePage} /> ))
+      }
+
+
     </div>
   );
 }
