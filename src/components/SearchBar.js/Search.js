@@ -24,10 +24,18 @@ export default function Search() {
       .catch((err) => console.error(err));
   }, []);
 
+
+
+
+const sub=(e)=>{
+  e.preventDefault()
+}
+
   return (
     <div className="flex flex-wrap items-center w-full">
       {/* era */}
       <form
+      onSubmit={(e)=>{sub(e)}}
         className="flex  lg:flex-row md:flex-row
       flex-col 
       text-white  font-Main  lg:p-2 md:p-2 items-end justify-between lg:gap-44 md:gap-10 gap-12 w-full "
