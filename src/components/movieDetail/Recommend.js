@@ -6,14 +6,12 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 
-import { AiOutlinePlayCircle } from "react-icons/ai";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import Hr from "../lines/Hr";
 // import required modules
 import { Pagination } from "swiper";
-import Vr from "../lines/Vr";
 export default function Recommend({ genres, goToBack }) {
   let url = `https://movies-app1.p.rapidapi.com/api/movies?query=${""}&
     page=1&limit=8&year=${""}&genres=${genres}`;
@@ -24,7 +22,6 @@ export default function Recommend({ genres, goToBack }) {
   useEffect(() => {
     setSlideOne(data && data.results);
   }, []);
-  console.log(slideOne);
   return (
     <div className="mt-10">
       <h1 className="text-4xl  mb-10 font-Main text-white  ">You may like</h1>

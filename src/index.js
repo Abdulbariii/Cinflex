@@ -11,7 +11,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ContextTheme>
+
         <App />
+        
       </ContextTheme>
     </BrowserRouter>
   </React.StrictMode>
