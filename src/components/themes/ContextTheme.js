@@ -21,6 +21,8 @@ const themeReducer = (state, action) => {
         return{...state,season:action.payload};
       case 'GET_CSEASON':
         return{...state,cseason:action.payload};
+      case 'GET_ID':
+        return{...state,id:action.payload};
     default:
       return state;
   }
@@ -41,6 +43,7 @@ export function ContextTheme(props) {
 
     page: "6",
 
+    id:'',
     openMenu: false,
     season:'0',
     cseason:'1'
@@ -83,6 +86,11 @@ export function ContextTheme(props) {
   const currentSeason=(cseason)=>{
     distpatch({type:'GET_CSEASON',payload:cseason});
   }
+  //
+  const epsode_id=(id)=>{
+    distpatch({type:'GET_ID',payload:id});
+
+  }
 
   return (
     <themeContext.Provider
@@ -96,7 +104,8 @@ export function ContextTheme(props) {
         getTitle,
         getPage,
         maxSeason,
-        currentSeason
+        currentSeason,
+        epsode_id
       }}
     >
       {props.children}
