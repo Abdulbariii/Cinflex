@@ -9,6 +9,7 @@ import Trailar from "./pages/Trailar";
 import SignUp from "./pages/form/SignUp";
 import { useLocation } from "react-router-dom";
 import Footer from "./components/footer/Footer";
+import { AnimatePresence,motion as m } from "framer-motion";
 function App() {
   const location = useLocation();
   console.log("pathname", location.pathname);
@@ -23,10 +24,11 @@ function App() {
   };
 
   return (
-    <div
+    <m.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:.50,ease:"easeOut"}}
       className={`  px-10 py-2  lg:px-52   ${pathGen()}  min-h-screen w-full`}
     >
       <Navigation></Navigation>
+      
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -40,7 +42,7 @@ function App() {
       </Routes>
 
       <Footer></Footer>
-    </div>
+    </m.div>
   );
 }
 
