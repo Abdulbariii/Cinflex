@@ -10,10 +10,18 @@ export default function Search() {
   const [years, setYears] = useState();
 
   // create link
+  // const options = {
+  //   method: 'GET',
+  //   headers: {
+  //     'X-RapidAPI-Key': '2506f97b25msh51cdafe170baf79p10e04fjsndfc97222bc19',
+  //     'X-RapidAPI-Host': 'movies-app1.p.rapidapi.com'
+  //   }
+  // };
+  // abo 1
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '2506f97b25msh51cdafe170baf79p10e04fjsndfc97222bc19',
+      'X-RapidAPI-Key': '5061c3d207msh9860747a9d6fbeap1329b5jsndef82b1d367b',
       'X-RapidAPI-Host': 'movies-app1.p.rapidapi.com'
     }
   };

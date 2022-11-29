@@ -24,9 +24,11 @@ function App() {
   };
 
   return (
-    <m.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:.50,ease:"easeOut"}}
+
+    <m.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0,ease:"easeOut"}}
       className={`  px-10 py-2  lg:px-52   ${pathGen()}  min-h-screen w-full`}
     >
+
       <Navigation></Navigation>
       
 
@@ -42,6 +44,7 @@ function App() {
       </Routes>
 
       <Footer></Footer>
+
     </m.div>
   );
 }
