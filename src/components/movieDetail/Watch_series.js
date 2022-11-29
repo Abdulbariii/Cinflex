@@ -10,48 +10,18 @@ const Watch_series = () => {
     const url=`https://movies-app1.p.rapidapi.com/api/episode/${id}`;
     
     const {data,error}=useFetch(url);
-    console.log(data);
-
-
-
-    const servers = [
-        {
-          nameServer: "Server 1",
-          value: 8,
-        },
-        {
-          nameServer: "Server 2",
-          value: 3,
-        },
-        {
-          nameServer: "Server 3",
-          value: 4,
-        },
-        {
-          nameServer: "Server 4",
-          value: 1,
-        },
-        {
-          nameServer: "Server 5",
-          value: 6,
-        },
-        {
-          nameServer: "Server 7",
-          value: 7,
-        },
-        {
-          nameServer: "Server 8",
-          value: 2,
-        },
-      ];
-    
-      const [serverUrl, setServerUrl] = useState(8);
-
-
+    // console.log(data&&data.result.embedUrls[0]);
+console.log(data);
 
   return (
     <div>
-        
+
+<iframe
+          src={data&&data.result&&data.result.embedUrls[2]&&data.result.embedUrls[2].url}
+          className="h-[31rem] rounded-md lg:w-[55rem] md:w-[55rem] w-full "
+          title="Iframe Example"
+        ></iframe>
+
     </div>
  )
 }
