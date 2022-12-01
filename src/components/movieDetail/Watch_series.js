@@ -13,14 +13,24 @@ const Watch_series = () => {
     // console.log(data&&data.result.embedUrls[0]);
 console.log(data);
 
+
+
+// data&&data.result&&data.result.embedUrls[2]&&data.result.embedUrls[2].url
+
   return (
     <div>
 
 <iframe
-          src={data&&data.result&&data.result.embedUrls[2]&&data.result.embedUrls[2].url}
-          className="h-[31rem] rounded-md lg:w-[55rem] md:w-[55rem] w-full "
-          title="Iframe Example"
+     // src={}
+          // className="h-[31rem] rounded-md lg:w-[55rem] md:w-[55rem] w-full "
+          // title="Iframe Example"
         ></iframe>
+
+
+        {
+// data&&data.result&&data.result.embedUrls&&data.result.embedUrls.map((urll,index)=><p className='text-white'>{urll.url} { index+1}</p>
+// )
+        }
 
     </div>
  )

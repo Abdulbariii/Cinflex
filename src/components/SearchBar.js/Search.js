@@ -13,18 +13,18 @@ export default function Search() {
   // const options = {
   //   method: 'GET',
   //   headers: {
-  //     'X-RapidAPI-Key': '2506f97b25msh51cdafe170baf79p10e04fjsndfc97222bc19',
+  //     'X-RapidAPI-Key': 'be66b1df87mshe46c33b7d7b5e2ap18ae02jsn7132fb194ac1',
   //     'X-RapidAPI-Host': 'movies-app1.p.rapidapi.com'
   //   }
   // };
-  // abo 1
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '5061c3d207msh9860747a9d6fbeap1329b5jsndef82b1d367b',
+      'X-RapidAPI-Key': '0e1aa90e06mshe6e538a59c86545p1acc12jsnde0b1704f0de',
       'X-RapidAPI-Host': 'movies-app1.p.rapidapi.com'
     }
   };
+
   
   useEffect(() => {
     fetch("https://movies-app1.p.rapidapi.com/api/years", options)
