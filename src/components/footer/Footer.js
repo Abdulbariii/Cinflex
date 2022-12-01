@@ -19,8 +19,9 @@ const Navigate=useNavigate('');
       <h1 className="lg:text-9xl md:text-7xl text-3xl font-Main text-white">CINFLEX</h1>
 
       <div className="flex flex-col gap-10">
-        {pages.map((page) => (
+        {pages.map((page,index) => (
           <Link
+          key={index}
           //it's take me to the start of the page
           
           onClick={()=>{  window.scrollTo(0, 0)

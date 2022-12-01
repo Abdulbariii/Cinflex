@@ -17,6 +17,7 @@ export default function Recommend({ genres, goToBack }) {
     page=1&limit=8&year=${""}&genres=${genres}`;
 
   const { data } = useFetch(url);
+  
   const [slideOne, setSlideOne] = useState([]);
 
   useEffect(() => {
@@ -36,8 +37,10 @@ export default function Recommend({ genres, goToBack }) {
       >
         {data &&
           data.results &&
-          data.results.map((e) => (
-            <SwiperSlide className="text-green-500">
+          data.results.map((e,index) => (
+            <SwiperSlide 
+            key={index}
+            className="text-green-500">
               <div className="flex flex-col  items-start justify-start gap-3 mb-20 text-green-500">
                 <div className="card-con relative  hover:scale-105 transition-all ">
                   <img

@@ -2,7 +2,7 @@ import React from 'react'
 import useTheme from '../../hook/useTheme';
 import Episode from './Episode';
 
-const Seasons = ({dataSeries}) => {
+const Seasons = ({dataSeries,data}) => {
 
     const {maxSeason,season,currentSeason} = useTheme();
 
@@ -38,7 +38,7 @@ const Seasons = ({dataSeries}) => {
 
 {/* number of epidsodes */}
 <div className=''>
-    <Episode dataSeries={dataSeries}/>
+    <Episode dataSeries={dataSeries} data={data}/>
 </div>
 
 

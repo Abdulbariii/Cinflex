@@ -23,6 +23,8 @@ const themeReducer = (state, action) => {
         return{...state,cseason:action.payload};
       case 'GET_ID':
         return{...state,id:action.payload};
+      case 'GET_URL':
+        return{...state,url:action.payload};
     default:
       return state;
   }
@@ -31,22 +33,16 @@ const themeReducer = (state, action) => {
 export function ContextTheme(props) {
   const [state, distpatch] = useReducer(themeReducer, {
     color: "bg-green-500",
-   
-
     mode: "bg-gray-900",
-
     year: "",
-
     gener: "",
-
     title: "",
-
     page: "6",
-
     id:'',
     openMenu: false,
     season:'0',
-    cseason:'1'
+    cseason:'1',
+    url:'',
   });
 
   //
@@ -91,11 +87,17 @@ export function ContextTheme(props) {
     distpatch({type:'GET_ID',payload:id});
 
   }
+  //
+  const seriesUrl=(url)=>{
+    distpatch({type:'GET_URL',payload:url});
+
+  }
 
   return (
     <themeContext.Provider
       value={{
         ...state,
+        seriesUrl,
         colorChange,
         openNavbar,
         colorMode,
@@ -105,7 +107,8 @@ export function ContextTheme(props) {
         getPage,
         maxSeason,
         currentSeason,
-        epsode_id
+        epsode_id,
+        
       }}
     >
       {props.children}

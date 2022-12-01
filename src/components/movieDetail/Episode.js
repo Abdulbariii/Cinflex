@@ -1,21 +1,26 @@
 import React from 'react'
 import useTheme from '../../hook/useTheme';
 
-const Episode = ({dataSeries}) => {
+const Episode = ({dataSeries,data}) => {
 
 //current season
-    const { cseason,epsode_id } = useTheme();
+    const { cseason,epsode_id,seriesUrl } = useTheme();
 //to sort episodes
 var eps=[];
     //2.return epsode's current season
-
     const getEpisode=(ep)=>{
         if(ep.season==cseason){
           return ep.episode
          }else{return null}
-    
     }
    
+    const fun=(ep)=>{
+      epsode_id(ep._id)
+
+      data&&data.result&&data.result.embedUrls&&data.result.embedUrls[0].url&&seriesUrl(data.result.embedUrls[0].url)
+      
+
+    }
 
 
 
@@ -30,7 +35,9 @@ var eps=[];
          {dataSeries.episodes.map(ep=>(
           
             getEpisode(ep)&&(<p
-              onClick={()=>{epsode_id(ep._id)}}
+              // onClick={()=>{epsode_id(ep._id)}}
+              onClick={()=>{fun(ep)}}
+             
               
               className=' 
             text-sm
